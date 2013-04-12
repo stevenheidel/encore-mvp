@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @concert.title %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @concert.date %>
+</p>
+
+<p>
+  <b>Venue:</b>
+  <%= @concert.venue %>
+</p>
+
+<p>
+  <b>Hashtag:</b>
+  <%= @concert.hashtag %>
+</p>
+
+<p>
+  <b>Facebook page:</b>
+  <%= @concert.facebook_page %>
+</p>
+
+<p>
+  <b>Twitter:</b>
+  <%= @concert.twitter %>
+</p>
+
+<p>
+  <b>Instagram:</b>
+  <%= @concert.instagram %>
+</p>
+
+
+<%= link_to 'Edit', edit_concert_path(@concert) %> |
+<%= link_to 'Back', concerts_path %>

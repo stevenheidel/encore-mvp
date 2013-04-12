@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  date: 2013-04-09 15:31:25
+  venue: MyString
+  hashtag: MyString
+  facebook_page: MyString
+  twitter: MyString
+  instagram: MyString
+
+two:
+  title: MyString
+  date: 2013-04-09 15:31:25
+  venue: MyString
+  hashtag: MyString
+  facebook_page: MyString
+  twitter: MyString
+  instagram: MyString
