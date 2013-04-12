@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Encore - Profile Page</title>
+    <title>Encore - Login Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
@@ -10,48 +10,14 @@
   <body>
     <div class="container-fluid">
       <div class="row-fluid">
-        <div id="top-bar">
-          <div id="info-button" class="top-button">
-            Info
-          </div>
-          <div id="profile-button" class="top-button">
-            My Profile
-          </div>
-        </div>
-      </div>
-
-      <div class="row-fluid">
-        <div id="concerts">
-          <script id="concert-template" type="text/x-handlebars-template">
-            {{#each concerts}}
-            <div class="span3">
-              <div class="concert-card">
-                <p class="concert-card-title">{{title}}</p>
-                <p class="concert-card-venue">At Venue</p>
-                <p class="concert-card-date">Date</p>
-                <div class="relive-button">Relive</div>
-              </div>
-            </div>
-            {{/each}}
-          </script>
-        </div>
+        <p>Login</p>
+        <p><a href="concerts.html">concerts.html</a></p>
+        <p><a href="posts.html">posts.html</a></p>
       </div>
     </div>
 
     <script src="http://code.jquery.com/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/handlebars.js"></script>
-
-    <script type="text/javascript">
-      $.getJSON("http://localhost:3000/concerts.json", function(data) {
-        var theTemplateScript = $("#concert-template").html();
-        var theTemplate = Handlebars.compile(theTemplateScript);
-
-        $("#concerts").replaceWith(theTemplate(data));
-      })
-
-      $.getScript("http://fast.fonts.com/jsapi/bc0650ed-88a8-4da2-a116-c96489ccaf0c.js");
-    </script>
 
     <script type="text/javascript" src="http://fast.fonts.com/jsapi/bc0650ed-88a8-4da2-a116-c96489ccaf0c.js"></script>
   </body>
