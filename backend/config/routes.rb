@@ -1,4 +1,10 @@
 EncoreMvp::Application.routes.draw do
+  root :to => "home#index" 
+
+  devise_for :users
+
+  get "home/index"
+
   resources :posts
 
 
@@ -6,7 +12,6 @@ EncoreMvp::Application.routes.draw do
   ActiveAdmin.routes(self)
 
   resources :concerts
-
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
