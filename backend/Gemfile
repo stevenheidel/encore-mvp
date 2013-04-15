@@ -47,3 +47,5 @@ gem 'inherited_resources'
 gem 'activeadmin'
 
 gem 'devise'
+
+gem 'instagram'
