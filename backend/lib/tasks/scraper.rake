@@ -12,14 +12,20 @@ namespace :scraper do
       #config.client_secret = "4d699ac7f6574a63b2ec5afcf914f4d7"
     end
 
+    images = []
+
     Instagram.location_search(concert.venue_lat, concert.venue_long).each do |location|
-      if string_similarity(location.name, concert.venue) > 0.25
+      location_likelihood = string_similarity(location.name, concert.venue)
+      if location_likelihood > 0.25
         Instagram.location_recent_media(location.id).each do |media|
-          puts media.link
+          caption_likelihood = string_similarity(media.caption.text, concert.title)
+          images << {:link => media.link, :image_url => media.images.low_resolution.url, 
+            :score => ((location_likelihood * caption_likelihood) * 1000).to_i}
         end
       end
     end
     
+    puts images.select{|i| i[:score] > 0}.inspect
   end
 end
 
