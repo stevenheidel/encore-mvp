@@ -5,8 +5,10 @@ namespace :scraper do
       exit
     end
 
+    # Find the concert
     concert = Concert.find_by_id(ENV['current_concert'].to_i)
 
+    # Set up Instagram
     Instagram.configure do |config|
       config.client_id = "245d5992fc774b1db8d0b93db5c0ffb6"
       #config.client_secret = "4d699ac7f6574a63b2ec5afcf914f4d7"
@@ -14,18 +16,37 @@ namespace :scraper do
 
     images = []
 
+    # Get images from instagram and assign a score
     Instagram.location_search(concert.venue_lat, concert.venue_long).each do |location|
       location_likelihood = string_similarity(location.name, concert.venue)
       if location_likelihood > 0.25
         Instagram.location_recent_media(location.id).each do |media|
           caption_likelihood = string_similarity(media.caption.text, concert.title)
-          images << {:link => media.link, :image_url => media.images.low_resolution.url, 
-            :score => ((location_likelihood * caption_likelihood) * 1000).to_i}
+          images << {
+            :link => media.link, 
+            :image_url => media.images.low_resolution.url, 
+            :text => media.caption.text,
+            :score => ((location_likelihood * caption_likelihood) * 1000).to_i
+          }
         end
       end
     end
     
-    puts images.select{|i| i[:score] > 0}.inspect
+    # Insert images into the database
+    posts = []
+    images.each do |image|
+      posts << Post.new(
+        :concert_id => concert.id, 
+        :link => image[:link], 
+        :network => "Instagram", 
+        :published => false, 
+        :medium => "Photo", 
+        :text => image[:text], 
+        :image_url => image[:image_url], 
+        :filter_score => image[:score]
+      )
+    end
+    Post.import posts
   end
 end
 

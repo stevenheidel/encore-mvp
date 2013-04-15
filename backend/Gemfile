@@ -49,3 +49,6 @@ gem 'activeadmin'
 gem 'devise'
 
 gem 'instagram'
+
+# for bulk import
+gem 'activerecord-import'
