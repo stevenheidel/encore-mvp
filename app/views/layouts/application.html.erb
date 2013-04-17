@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>EncoreMvp</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Encore</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <script src="http://fast.fonts.com/jsapi/bc0650ed-88a8-4da2-a116-c96489ccaf0c.js"></script>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div data-role="page">
+      <%= render :partial => 'shared/top_bar' %>
 
-<%= yield %>
-
-</body>
+      <div data-role="content">
+        <%= yield %>
+      </div>
+    </div>
+  </body>
 </html>

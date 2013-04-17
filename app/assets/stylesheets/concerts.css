@@ -1,0 +1,44 @@
+#concert-list .ui-li {
+  background-image: linear-gradient(0deg, #BFBFBF 0%, #DDDDDD 0%, #FFFFFF 100%);
+  box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.50);
+  margin-bottom: 30px;
+}
+
+#concert-list h3 {
+  font-family: 'Avenir LT W01 85 Heavy';
+  font-size: 51px;
+  color: rgba(74,74,74,1);
+  margin-top: 0.3em;
+  margin-bottom: 0.2em;
+}
+
+#concert-list strong {
+  font-family: 'Avenir LT W01 35 Light';
+  font-size: 36px;
+  color: rgba(155,155,155,1);
+  line-height: 49px;
+}
+
+#concert-list p {
+  font-family: 'Avenir LT W01 35 Light';
+  font-size: 24px;
+  color: rgba(155,155,155,1);
+  line-height: 33px;
+}
+
+#concert-list .ui-li-aside {
+  margin-top: 4em;
+  width: 150px;
+}
+
+#concert-list .ui-li-aside .ui-btn {
+  background-image: linear-gradient(180deg, #FF374A 0%, #C70303 100%);
+  border-radius: 10px;
+}
+
+#concert-list .ui-li-aside .ui-btn .ui-btn-text {
+  font-family: 'Avenir LT W01 85 Heavy';
+  font-size: 24px;
+  color: rgba(255,255,255,1);
+  text-shadow: 0px 2px 5px rgba(0,0,0,0.50);
+}
