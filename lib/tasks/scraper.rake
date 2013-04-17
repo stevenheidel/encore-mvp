@@ -50,6 +50,7 @@ namespace :scraper do
   end
 end
 
+# http://stackoverflow.com/questions/653157/a-better-similarity-ranking-algorithm-for-variable-length-strings
 def string_similarity(str1, str2)
   str1.downcase! 
   pairs1 = (0..str1.length-2).collect {|i| str1[i,2]}.reject {
