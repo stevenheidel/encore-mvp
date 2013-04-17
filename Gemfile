@@ -44,3 +44,6 @@ gem 'instagram'
 
 # for bulk import
 gem 'activerecord-import'
+
+# for Russian Doll Caching
+gem 'cache_digests'

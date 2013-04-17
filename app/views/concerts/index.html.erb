@@ -4,7 +4,7 @@
     <h3><%= concert.title %></h3>
     <p><strong><%= concert.venue %></strong></p>
     <p><%= concert.date.strftime("%B %d, %Y") %></p>
-    <p class="ui-li-aside"><a href="#" data-role="button">Relive</a></p>
+    <p class="ui-li-aside"><%= link_to "Relive", concert, data: {role: 'button'} %></p>
   </li>
   <% end %>
 </ul>
