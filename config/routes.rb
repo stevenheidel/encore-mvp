@@ -1,12 +1,14 @@
 EncoreMvp::Application.routes.draw do
-  #root :to => "welcome#index"
+  root :to => 'welcome#index', :as => :new_user_session # home is also login
 
   resources :concerts, :only => [:index, :show]
 
-  # routes for Users and Facebook login
+  get 'profile' => 'welcome#profile'
+
+  # route for Users and Facebook login
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   devise_scope :user do
-    get 'sign_in', :to => 'devise/sessions#new', :as => :new_user_session
+    #get 'sign_in', :to => 'devise/sessions#new', :as => :new_user_session
     get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
   end
 

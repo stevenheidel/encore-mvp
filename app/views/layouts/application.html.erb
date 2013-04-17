@@ -10,7 +10,7 @@
   </head>
   <body>
     <div data-role="page">
-      <%= render :partial => 'shared/top_bar' %>
+      <%= render('shared/top_bar') unless current_page?(root_url) %>
 
       <div data-role="content">
         <%= yield %>
