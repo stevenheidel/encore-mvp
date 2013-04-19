@@ -1,10 +1,33 @@
-<div data-role="header" id="top-bar">
-  <a href="#" data-icon="info" class="menu-trigger">Info</a>
-  <a href="#">My Profile</a>
+<div id="menu" style="display:none">
+  <h2>Encore</h2>
+  <ul>
+    <li><%= link_to "Profile" %></li>
+    <li><%= link_to "Social Stream" %></li>
+    <li><%= link_to "Concert Listings" %></li>
+    <li><%= link_to "Deals" %></li>
+  </ul>
+</div>
+
+<div data-role="header" id="top-bar" style="display:fixed;">
+  <a href="#menu" data-icon="bars" class="menu-trigger">Menu</a>
+  <div class="bolt"><%= image_tag "shared/bolt.png" %></div>
+  <a href="index.html" data-icon="info">Info</a>
   <span class="ui-title" />
 </div>
 
-<ul id="menu" style="display: none;">
-  <li>Test</li>
-  <li>Test 2</li>
-</ul>
+<script type="text/javascript">
+  $(function() {
+    var jPM = $.jPanelMenu({
+      /*beforeOpen: function() {
+        $('.ui-content').css('margin-top', '-8px');
+        $('.ui-mobile-viewport').css('margin-left', '-8px');
+      },
+      afterClose: function() {
+        $('.ui-content').css('margin-top', '0px');
+        $('.ui-mobile-viewport').css('margin-left', '0px');
+      }//,*/
+      //duration: 3000
+    });
+    jPM.on();
+  });
+</script>

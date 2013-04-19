@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>Encore</title>
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
-    <script src="http://fast.fonts.com/jsapi/bc0650ed-88a8-4da2-a116-c96489ccaf0c.js"></script>
     <script src="https://raw.github.com/davidpaulsson/jPanelMenu/1380ce5ad274e05d3330ae821726fa66058c7411/jquery.jpanelmenu.js"></script>
+
     <%= csrf_meta_tags %>
   </head>
   <body>
@@ -17,9 +23,5 @@
         <%= yield %>
       </div>
     </div>
-    <script type="text/javascript">
-      var jPM = $.jPanelMenu();
-      jPM.on();
-    </script>
   </body>
 </html>
