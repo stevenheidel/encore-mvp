@@ -1,3 +1,21 @@
+/* Mixins */
+@mixin gradient($from, $to) {
+  /* fallback/image non-cover color */
+  background-color: $from;
+ 
+  /* Firefox 3.6+ */
+  background-image: -moz-linear-gradient($from, $to);
+ 
+  /* Safari 4+, Chrome 1+ */
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
+ 
+  /* Safari 5.1+, Chrome 10+ */
+  background-image: -webkit-linear-gradient($from, $to);
+ 
+  /* Opera 11.10+ */
+  background-image: -o-linear-gradient($from, $to);
+}
+
 /* Custom Styles */
 #top-bar.ui-header {
 	background-image: radial-gradient(at top, #FF374A, #B60000);
@@ -9,7 +27,7 @@
 #top-bar .ui-btn {
 	border-radius: 2px;
 	border: 0px;
-	background-image: linear-gradient(180deg, #FF374A 0%, #B60000 100%);
+	@include gradient(#FF374A, #B60000);
 	box-shadow: 0px 1px 1px 0 rgba(0,0,0,0.50);
 }
 
@@ -24,7 +42,7 @@
 .bolt {
 	text-align: center;
 	padding-top: 3px;
-  }
+}
 
 .profilename {
 	font-family: 'Open Sans', sans-serif;
@@ -34,7 +52,7 @@
 	text-shadow: 0px 2px 5px rgba(0,0,0,0.50);
 	padding-left: 10px;
 	padding-bottom: 2px;
-    }
+}
 
 .profilepic {
     width:130px;
@@ -58,7 +76,7 @@
 }
 
 #concert-list .ui-li {
-	background-image: linear-gradient(0deg, #BFBFBF 0%, #DDDDDD 0%, #FFFFFF 100%);
+	@include gradient(#FFFFFF, #DDDDDD);
 	box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.50);
 	margin-bottom: 30px;
 }
@@ -91,7 +109,7 @@
 }
 
 #concert-list .ui-li-aside .ui-btn {
-	background-image: linear-gradient(180deg, #FF374A 0%, #C70303 100%);
+	@include gradient(#FF374A, #C70303);
 	border-radius: 10px;
 }
 
@@ -105,7 +123,7 @@
 #profilecover {
 	margin: -15px -15px 15px -15px;
 	height: 130px; 
-  background-image: linear-gradient(-180deg, #181818 0%, #363636 0%, #181818 100%);
+	@include gradient(#363636, #181818);
 	box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
 }
 
@@ -136,11 +154,11 @@
 }
 
 #jPanelMenu-menu li a:hover, #jPanelMenu-menu li a:focus {
-	background: linear-gradient(#484848, #383838);
+	@include gradient(#484848, #383838);
 }
 
 #jPanelMenu-menu li a:active {
-	background: linear-gradient(#3e3e3e, #2e2e2e);
+	@include gradient(#3e3e3e, #2e2e2e);
 	box-shadow: 0 2px 7px #222 inset;
 	border-top-color: #222;
 	padding-top: 0.55em;
@@ -148,7 +166,7 @@
 }
 
 #jPanelMenu-menu li a {
-	background: linear-gradient(#3e3e3e, #383838);
+	@include gradient(#3e3e3e, #383838);
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	font-weight: 700;
