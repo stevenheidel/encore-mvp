@@ -91,7 +91,7 @@ a[data-role="button"][data-theme="reset"].app-theme-none .ui-btn-inner {
 	color: rgba(255,255,255,1);
 	line-height: 10px;
 	padding-bottom:10px;
-    }
+}
 
 #concert-list .ui-li {
 	background-image: linear-gradient(0deg, #BFBFBF 0%, #DDDDDD 0%, #FFFFFF 100%);
@@ -102,22 +102,23 @@ a[data-role="button"][data-theme="reset"].app-theme-none .ui-btn-inner {
 #concert-list h3 {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 28px;
-	color: rgba(74,74,74,100);
+	color: rgba(74,74,74,1);
 	margin-top: 0.3em;
 	margin-bottom: 0.2em;
 }
 
 #concert-list strong {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 15px;
-	color: rgba(155,155,155,100);
-	line-height: 21px;
+	font-size: 17px;
+	color: rgba(155,155,155,1);
+	line-height: 22px;
+
 }
 
 #concert-list p {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 13px;
-	color: rgba(155,155,155,100);
+	color: rgba(155,155,155,1);
 	line-height: 17px;
 }
 
@@ -139,6 +140,7 @@ a[data-role="button"][data-theme="reset"].app-theme-none .ui-btn-inner {
 }
 
 #profilecover {
+	padding: -20px;
 	width:100%; height:130px; background-image: -o-linear-gradient(-90deg, #181818 0%, #363636 0%, #181818 100%);
         background-image: -moz-linear-gradient(-90deg, #181818 0%, #363636 0%, #181818 100%);
         background-image: -webkit-linear-gradient(-90deg, #181818 0%, #363636 0%, #181818 100%);

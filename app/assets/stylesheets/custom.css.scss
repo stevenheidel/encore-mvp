@@ -1,0 +1,162 @@
+/* Custom Styles */
+#top-bar.ui-header {
+	@include radial-gradient(50% 0%, #FF374A 0%, #B60000 100%);
+	border: 1px solid #B20001;
+	box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.50);
+	height: 45px;
+}
+
+#top-bar .ui-btn {
+	border-radius: 2px;
+	border: 0px;
+	@include linear-gradient(#FF374A, #B60000);
+	box-shadow: 0px 1px 1px 0 rgba(0,0,0,0.50);
+}
+
+#top-bar .ui-btn-text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+	line-height: 25px;
+	text-shadow: 0px 2px 5px rgba(0,0,0,0.50);
+}
+
+.bolt {
+	text-align: center;
+	padding-top: 3px;
+}
+
+.profilename {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 26px;
+	color: rgba(255,255,255,1);
+	line-height: 35px;
+	text-shadow: 0px 2px 5px rgba(0,0,0,0.50);
+	padding-left: 10px;
+	padding-bottom: 2px;
+}
+
+.profilepic {
+    width:130px;
+    height:130px;
+    padding-left:9px;
+}
+
+.artistpic {
+	width:110px;
+	height:110px;
+	padding-top:20px;
+	padding-left:10px;
+}
+
+.city {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	color: rgba(255,255,255,1);
+	line-height: 10px;
+	padding-bottom:10px;
+}
+
+#concert-list .ui-li {
+	@include linear-gradient(#FFFFFF, #DDDDDD);
+	box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.50);
+	margin-bottom: 30px;
+}
+
+#concert-list h3 {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 28px;
+	color: rgba(74,74,74,1);
+	margin-top: 0.3em;
+	margin-bottom: 0.2em;
+}
+
+#concert-list strong {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 17px;
+	color: rgba(155,155,155,1);
+	line-height: 22px;
+}
+
+#concert-list p {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+	color: rgba(155,155,155,1);
+	line-height: 17px;
+}
+
+#concert-list .ui-li-aside {
+	margin-top: 2em;
+	width: 85px;
+}
+
+#concert-list .ui-li-aside .ui-btn {
+	@include linear-gradient(#FF374A, #C70303);
+	border-radius: 10px;
+}
+
+#concert-list .ui-li-aside .ui-btn .ui-btn-text {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	color: rgba(255,255,255,1);
+	text-shadow: 0px 2px 5px rgba(0,0,0,0.50);
+}
+
+#profilecover {
+	margin: -15px -15px 15px -15px;
+	height: 130px; 
+	@include linear-gradient(#363636, #181818);
+	box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+}
+
+/* Styles for the nav bar */
+#jPanelMenu-menu {
+	overflow-y: auto !important;
+	background: #3b3b3b;
+}
+
+#jPanelMenu-menu h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-weight: 700;
+	text-decoration: none;
+	text-shadow: 0 -1px 2px #222;
+	color: #f7f7f7;
+	padding-left: 0.5em;
+	line-height: 47px;
+	margin: 0px;
+}
+
+#jPanelMenu-menu ul {
+	border-bottom: 1px solid #484848;
+	list-style: none;
+	list-style-image: none;
+	margin: 0;
+	padding: 0;
+}
+
+#jPanelMenu-menu li a:hover, #jPanelMenu-menu li a:focus {
+	@include linear-gradient(#484848, #383838);
+}
+
+#jPanelMenu-menu li a:active {
+	@include linear-gradient(#3e3e3e, #2e2e2e);
+	box-shadow: 0 2px 7px #222 inset;
+	border-top-color: #222;
+	padding-top: 0.55em;
+	padding-bottom: 0.45em;
+}
+
+#jPanelMenu-menu li a {
+	@include linear-gradient(#3e3e3e, #383838);
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	font-weight: 700;
+	display: block;
+	padding: 0.5em 5%;
+	border-top: 1px solid #484848;
+	border-bottom: 1px solid #2e2e2e;
+	text-decoration: none;
+	text-shadow: 0 -1px 2px #222;
+	color: #f7f7f7;
+}

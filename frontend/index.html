@@ -8,7 +8,7 @@
     <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
 
     <link href="style.css" rel="stylesheet" media="screen">
-    <script src='http://fonts.googleapis.com/css?family=Open+Sans'></script>
+    <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Open+Sans' />
   </head>
   <body>
     <div data-role="page">
@@ -19,7 +19,10 @@
         <a href="index.html" data-role="button" data-theme="reset" data-icon="infobutton" class="ios app-theme-none notext"></a>
         <span class="ui-title" />
       </div>
-      <div id="profilecover">
+      
+      
+        <div data-role="content">
+          <div id="profilecover">
                   <table>
                 <tr>
                     <td><img class="profilepic" src="images/profilepicture.jpg"> </td>
@@ -30,8 +33,6 @@
                 </tr>
             </table>
         </div>
-      
-        <div data-role="content">
         <ul data-role="listview" data-inset="true" data-shadow="false" data-corners="false" id="concert-list">
           <li><img class="artistpic" src="images/passionpit.png">
             <h3>Passion Pit</h3>

@@ -1,5 +1,23 @@
-<%= link_to 'Sign Out', destroy_user_session_path, method: 'delete' %>
+<div id="profilecover">
+  <table>
+    <tr>
+      <td>
+        <%= image_tag "profile/passionpit.png", :class => "profilepic" %>
+      </td>
+      <td class="profilename">
+        <strong><%= current_user.name %></strong>
+        <br />
+        <div class="city">
+          <%= image_tag "profile/locationmarker.png" %>
+          <%= request.location.city %>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
 
 <ul data-role="listview" data-inset="true" data-shadow="false" data-corners="false" id="concert-list">
   <%= render @concerts %>
 </ul>
+
+<%= link_to 'Sign Out', destroy_user_session_path, method: 'delete' %>

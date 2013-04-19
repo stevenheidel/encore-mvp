@@ -14,9 +14,7 @@ end
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
-  gem 'therubyracer', :platforms => :ruby
-
+  
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -47,3 +45,9 @@ gem 'activerecord-import'
 
 # for Russian Doll Caching
 gem 'cache_digests'
+
+# for determining the city
+gem 'geocoder'
+
+# for SCSS mixins
+gem 'bourbon'
