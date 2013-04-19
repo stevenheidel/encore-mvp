@@ -45,3 +45,6 @@ gem 'activerecord-import'
 
 # for Russian Doll Caching
 gem 'cache_digests'
+
+# for determining the city
+gem 'geocoder'

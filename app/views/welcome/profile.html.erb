@@ -5,11 +5,11 @@
         <%= image_tag "profile/passionpit.png", :class => "profilepic" %>
       </td>
       <td class="profilename">
-        <strong>Nick Klimchuk</strong>
+        <strong><%= current_user.name %></strong>
         <br />
         <div class="city">
           <%= image_tag "profile/locationmarker.png" %>
-          Toronto
+          <%= request.location.city %>
         </div>
       </td>
     </tr>
