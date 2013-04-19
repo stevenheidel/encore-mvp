@@ -37,8 +37,8 @@
     }
 
 .profilepic {
-    width:153px;
-    height:153px;
+    width:130px;
+    height:130px;
     padding-left:9px;
 }
 
@@ -54,7 +54,7 @@
 	font-size: 14px;
 	color: rgba(255,255,255,1);
 	line-height: 10px;
-	padding-bottom:30px;
+	padding-bottom:10px;
     }
 
 #concert-list .ui-li {
@@ -104,12 +104,12 @@
 
 #profilecover {
 	width:100%; height:130px; background-image: -o-linear-gradient(-90deg, #181818 0%, #363636 0%, #181818 100%);
-           background-image: -moz-linear-gradient(-90deg, #181818 0%, #363636 0%, #181818 100%);
-           background-image: -webkit-linear-gradient(-90deg, #181818 0%, #363636 0%, #181818 100%);
-           background-image: -ms-linear-gradient(-90deg, #181818 0%, #363636 0%, #181818 100%);
-           background-image: linear-gradient(-180deg, #181818 0%, #363636 0%, #181818 100%);
+        background-image: -moz-linear-gradient(-90deg, #181818 0%, #363636 0%, #181818 100%);
+        background-image: -webkit-linear-gradient(-90deg, #181818 0%, #363636 0%, #181818 100%);
+        background-image: -ms-linear-gradient(-90deg, #181818 0%, #363636 0%, #181818 100%);
+        background-image: linear-gradient(-180deg, #181818 0%, #363636 0%, #181818 100%);
            
-           -moz-box-shadow:    0px 2px 4px 0px rgba(0,0,0,0.50);
-           -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
-           box-shadow:         0px 2px 4px 0px rgba(0,0,0,0.50);
+        -moz-box-shadow:    0px 2px 4px 0px rgba(0,0,0,0.50);
+        -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+        box-shadow:         0px 2px 4px 0px rgba(0,0,0,0.50);
 }
