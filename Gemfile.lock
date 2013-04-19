@@ -197,6 +197,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   activerecord-import
+  bourbon
   cache_digests
   coffee-rails (~> 3.2.1)
   devise

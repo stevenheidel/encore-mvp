@@ -48,3 +48,6 @@ gem 'cache_digests'
 
 # for determining the city
 gem 'geocoder'
+
+# for SCSS mixins
+gem 'bourbon'
