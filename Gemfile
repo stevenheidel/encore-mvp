@@ -51,3 +51,7 @@ gem 'geocoder'
 
 # for SCSS mixins
 gem 'bourbon'
+
+# for image uploads
+gem 'paperclip'
+gem 'aws-sdk'

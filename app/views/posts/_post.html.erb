@@ -1,1 +1,17 @@
-<%= post.link %>
+<div id="photobar">
+  <table class="picturelabel">
+    <tr>
+      <td class="first">
+        <%= image_tag "stream/passionpit.png", :class => "contentpic" %>
+      </td>
+      <td>
+        <div class="phototext">Nick Klimchuk</div>
+      </td>
+      <td class="last">
+        <%= image_tag "stream/heart.png", :class => "heartpic" %>
+      </td>
+    </tr>
+  </table>  
+</div>
+
+<div id="photo"><%= image_tag post.image_url, :class => "photostream" %></div>

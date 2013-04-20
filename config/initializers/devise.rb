@@ -217,8 +217,7 @@ Devise.setup do |config|
 
   facebook_id = ENV['FACEBOOK_ID'] || "459538097455084"
   facebook_secret = ENV['FACEBOOK_SECRET'] || "24e07ca9763ccbde16bc5fb5c8a4a956"
-  config.omniauth :facebook, facebook_id, facebook_secret,
-            :image_size => 'large'
+  config.omniauth :facebook, facebook_id, facebook_secret
 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or

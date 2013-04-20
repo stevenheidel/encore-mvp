@@ -12,6 +12,9 @@ EncoreMvp::Application.routes.draw do
     delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
   end
 
+  # crutch to fix sign_out error
+  match "sign_out" => redirect("/")
+
   # routes for Active Admin
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

@@ -29,7 +29,7 @@
 #profilecover {
 	margin: -15px -15px 15px -15px;
 	height: 130px;
-	@include linear-gradient(#181818, #363636);
+	@include linear-gradient(#363636, #181818);
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
   padding: 10px;
 }
@@ -165,3 +165,160 @@
 	text-shadow: 0 -1px 2px #222;
 	color: #f7f7f7;
 }
+
+/* Live stream */
+
+#concertinfo {
+background: #FFFFFF;
+-moz-box-shadow:    0px 2px 4px 0px rgba(0,0,0,0.50);
+-webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+box-shadow:         0px 2px 4px 0px rgba(0,0,0,0.50);
+bottom: 20px;
+margin: -15px -15px 15px -15px;
+}
+
+#concertinfotext {
+font-family: 'Open Sans', sans-serif;
+font-size: 13px;
+color: #4A4A4A;
+line-height: 20px;
+padding-left: 155px;
+padding-bottom: 0px;
+padding-top: 3px;
+}
+
+#photobar {
+width:372px; 
+height:55px;
+@include linear-gradient(#E9E9E9, #FFFFFF);
+
+-moz-box-shadow:    0px 2px 4px 0px rgba(0,0,0,0.50);
+-webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+box-shadow:         0px 2px 4px 0px rgba(0,0,0,0.50);
+
+white-space: nowrap;
+}
+
+table.picturelabel {
+	width: 100%;
+}
+
+td.first {
+	width:55px;
+}
+
+td.last {
+	width:1px;
+	white-space:nowrap;
+}
+
+.phototext {
+font-family: 'Open Sans', sans-serif;
+font-size: 24px;
+color: #8A8A8A;
+text-align: left;
+padding-left:5px;
+padding-bottom: 7px;
+}
+
+.contentpic {
+    width:55px;
+    height:55px;
+    padding-left: 5px;
+}
+
+.heartpic {
+    width:30px;
+    height:30px;
+    text-align:right;
+    white-space: nowrap;
+    padding-bottom: 5px;
+
+}
+
+#photo {
+width:372px; height:372px;
+@include linear-gradient(#E9E9E9, #FFFFFF);
+
+-moz-box-shadow:    0px 2px 4px 0px rgba(0,0,0,0.50);
+-webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+box-shadow:         0px 2px 4px 0px rgba(0,0,0,0.50);
+
+margin-bottom: 15px;
+} 
+
+.photostream {
+	width:372px;
+	height:372px;
+}
+
+.artistprofilename {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 31px;
+	color: rgba(255,255,255,1);
+	line-height: 35px;
+	text-shadow: 0px 2px 5px rgba(0,0,0,0.50);
+	padding-left: 10px;
+	padding-bottom: 20px;
+    }
+
+.artistprofilepic {
+width:165px;
+    height:165px;
+    padding-left:3px;
+}
+
+.artistpic {
+	width:110px;
+	height:110px;
+	padding-top:20px;
+	padding-left:10px;
+	z-index:1;
+}
+    
+/* Login page */
+    
+.loginbody {background-color:#b0c4de;}
+
+#logintext {
+font-family: 'Open Sans', sans-serif;
+font-size: 18px;
+color: #FFFFFF;
+line-height: 30px;
+text-align: center;
+}
+
+#bolt {
+text-align: center;
+}
+
+#background {
+
+width: 100%;
+height: 100%;
+
+border-radius: 6px;
+
+@include linear-gradient(#363636, #181818);
+
+-moz-box-shadow:    0px 2px 8px 0px #000000;
+-webkit-box-shadow: 0px 2px 8px 0px #000000;
+box-shadow:         0px 2px 8px 0px #000000;
+
+}
+
+#bolt2 {
+
+position: absolute;
+top: 20%;
+left: 50%;
+   
+
+}
+
+#facebookbtn {
+position: absolute;
+top: 20%;
+left: 50%;
+
+}    

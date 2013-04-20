@@ -1,5 +1,5 @@
 <li>
-  <%= image_tag "profile/passionpit.png", :class => "artistpic" %>
+  <%= image_tag concert.picture.url(:thumb), :class => "artistpic" %>
   <h3><%= concert.title %></h3>
   <p><strong><%= concert.venue %></strong></p>
   <p><%= concert.date.strftime("%B %d, %Y") %></p>
