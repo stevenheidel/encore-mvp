@@ -20,7 +20,15 @@
     <script>
       var jPM;
       $(document).bind('pageinit', function() {
-        jPM = jPM || $.jPanelMenu();
+        jPM = jPM || $.jPanelMenu({
+          beforeOpen: function() {
+            $("#menu-trigger").removeClass("menu-trigger");
+          },
+          afterClose: function() {
+            $("#menu-trigger").addClass("menu-trigger");
+          },
+          animation: true
+        });
         jPM.off();
         jPM.on();
       });
