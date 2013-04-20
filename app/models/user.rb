@@ -16,8 +16,9 @@ class User < ActiveRecord::Base
                          uid: auth.uid,
                          email: auth.info.email
                         )
-    end
 
+    end
+    p auth.info.image
     user
   end
 end

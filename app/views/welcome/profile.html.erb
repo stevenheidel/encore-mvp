@@ -2,7 +2,9 @@
   <table>
     <tr>
       <td>
-        <%= image_tag "profile/passionpit.png", :class => "profilepic" %>
+        <div class="profilepic">
+          <%= image_tag "http://graph.facebook.com/#{current_user.uid}/picture?width=120&height=120" %>
+        </div>
       </td>
       <td class="profilename">
         <strong><%= current_user.name %></strong>
