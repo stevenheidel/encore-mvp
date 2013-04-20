@@ -26,6 +26,14 @@
 	padding-top: 3px;
 }
 
+#profilecover {
+	margin: -15px -15px 15px -15px;
+	height: 130px;
+	@include linear-gradient(#181818, #363636);
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+  padding: 10px;
+}
+
 .profilename {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 26px;
@@ -33,13 +41,17 @@
 	line-height: 35px;
 	text-shadow: 0px 2px 5px rgba(0,0,0,0.50);
 	padding-left: 10px;
-	padding-bottom: 2px;
+	padding-bottom: 12px;
 }
 
 .profilepic {
-    width:130px;
-    height:130px;
-    padding-left:9px;
+    -moz-border-radius: 120px/120px;
+    -webkit-border-radius: 120px 120px;
+    border-radius: 120px/120px;
+    border:solid 3px #fff; 
+    width:120px;
+    height:120px;
+    overflow: hidden; 
 }
 
 .artistpic {
@@ -73,9 +85,9 @@
 
 #concert-list strong {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 17px;
+	font-size: 15px;
 	color: rgba(155,155,155,1);
-	line-height: 22px;
+	line-height: 21px;
 }
 
 #concert-list p {
@@ -100,13 +112,6 @@
 	font-size: 14px;
 	color: rgba(255,255,255,1);
 	text-shadow: 0px 2px 5px rgba(0,0,0,0.50);
-}
-
-#profilecover {
-	margin: -15px -15px 15px -15px;
-	height: 130px; 
-	@include linear-gradient(#363636, #181818);
-	box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
 }
 
 /* Styles for the nav bar */
