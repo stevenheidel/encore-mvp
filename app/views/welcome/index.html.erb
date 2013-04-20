@@ -1,13 +1,8 @@
-<div id="background" data-position="fixed">
-  <br /><br />
-  <p id="bolt">
-    <%= image_tag "login/bolt2.png", :id => "bolt2" %>
-  </p>
+<%= image_tag "login/bolt2.png", :class => "centre-image" %>
 
-  <br /><br />
-  <p id="logintext"> 
-    Welcome to the exclusive preview of <br /> 
-    Encore, your concert app.<br /><br /> 
-    <%= link_to image_tag("login/facebook.png"), user_omniauth_authorize_path(:facebook), data: {ajax: false} %>
-  </p>     
-</div>
+<p id="logintext"> 
+  Welcome to the exclusive preview of <br /> 
+  Encore, your concert app.
+</p>
+
+<%= link_to image_tag("login/facebook.png", :class => "centre-image"), user_omniauth_authorize_path(:facebook), data: {ajax: false} %>     

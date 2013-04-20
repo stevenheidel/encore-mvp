@@ -278,47 +278,24 @@ width:165px;
     
 /* Login page */
     
-.loginbody {background-color:#b0c4de;}
-
 #logintext {
-font-family: 'Open Sans', sans-serif;
-font-size: 18px;
-color: #FFFFFF;
-line-height: 30px;
-text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	color: #FFFFFF;
+	line-height: 30px;
+	text-align: center;
 }
 
-#bolt {
-text-align: center;
+.ui-page[data-url="/"] {
+	@include linear-gradient(#363636, #181818);
 }
 
-#background {
-
-width: 100%;
-height: 100%;
-
-border-radius: 6px;
-
-@include linear-gradient(#363636, #181818);
-
--moz-box-shadow:    0px 2px 8px 0px #000000;
--webkit-box-shadow: 0px 2px 8px 0px #000000;
-box-shadow:         0px 2px 8px 0px #000000;
-
+.ui-page[data-url="/sign_out"] {
+	@include linear-gradient(#363636, #181818);
 }
 
-#bolt2 {
-
-position: absolute;
-top: 20%;
-left: 50%;
-   
-
+.centre-image {
+	display: block;
+  margin-left: auto;
+  margin-right: auto
 }
-
-#facebookbtn {
-position: absolute;
-top: 20%;
-left: 50%;
-
-}    
