@@ -1,7 +1,8 @@
 @import "bourbon";
 
-@import "custom";
-
 @import "jquery.mobile";
+
+// remember that in css later = higher priority
+@import "custom";
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans);

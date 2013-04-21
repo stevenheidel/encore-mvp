@@ -26,7 +26,9 @@ namespace :scraper do
             :link => media.link, 
             :image_url => media.images.low_resolution.url, 
             :text => media.caption.text,
-            :score => ((location_likelihood * caption_likelihood) * 1000).to_i
+            :score => ((location_likelihood * caption_likelihood) * 1000).to_i,
+            :user_name => media.caption.from.full_name,
+            :user_image_url => media.caption.from.profile_picture
           }
         end
       end
@@ -43,7 +45,9 @@ namespace :scraper do
         :medium => "Photo", 
         :text => image[:text], 
         :image_url => image[:image_url], 
-        :filter_score => image[:score]
+        :filter_score => image[:score],
+        :user_name => image[:user_name],
+        :user_image_url => image[:user_image_url]
       )
     end
     Post.import posts

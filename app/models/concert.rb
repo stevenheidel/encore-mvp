@@ -5,6 +5,7 @@ class Concert < ActiveRecord::Base
   has_many :posts
 
   has_attached_file :picture, styles: {
-    thumb: '100x100>'
+    thumb: '100x100>',
+    medium: '165x165>'
   }
 end
