@@ -1,10 +1,9 @@
 <div id="menu" style="display:none">
   <h2>Encore</h2>
   <ul>
-    <li><%= link_to "Profile", "/profile", data: {transition: "none"}, onclick: "jPM.close()" %></li>
-    <li><%= link_to "Social Stream", data: {transition: "none"} %></li>
-    <li><%= link_to "Concert Listings", data: {transition: "none"} %></li>
-    <li><%= link_to "Deals", data: {transition: "none"} %></li>
+    <% [["Profile", "/profile"], ["Live Stream", "/"], ["Concert Listings", "/"], ["Deals", "/"]].each do |page| %>
+    <li><%= link_to page[0], page[1], data: {transition: "none"}, onclick: "jPM.close()" %></li>
+    <% end %>
     <li><%= link_to 'Sign Out', destroy_user_session_path, method: 'delete' %></li>
   </ul>
 </div>

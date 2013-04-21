@@ -2,16 +2,15 @@
   <table>
     <tr>
       <td>
-        <div class="profilepic">
+        <div class="contentpic">
           <%= image_tag "http://graph.facebook.com/#{current_user.uid}/picture?width=120&height=120" %>
         </div>
       </td>
       <td class="profilename">
         <strong><%= current_user.name %></strong>
-        <br />
         <div class="city">
           <%= image_tag "profile/locationmarker.png" %>
-          <%= request.location.city %>
+          <p><%= request.location.city %></p>
         </div>
       </td>
     </tr>

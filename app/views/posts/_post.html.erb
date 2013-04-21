@@ -2,7 +2,9 @@
   <table class="picturelabel">
     <tr>
       <td class="first">
-        <%= image_tag post.user_image_url, :class => "contentpic" %>
+        <div class="contentpic">
+          <%= image_tag post.user_image_url %>
+        </div>
       </td>
       <td>
         <div class="phototext"><%= post.user_name %></div>
