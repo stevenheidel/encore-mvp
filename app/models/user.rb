@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
   attr_accessible :provider, :uid
   attr_accessible :name
 
+  has_and_belongs_to_many :concerts, :uniq => true
+  has_and_belongs_to_many :posts, :uniq => true
+
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.where(:provider => auth.provider, :uid => auth.uid).first
 
@@ -16,9 +19,14 @@ class User < ActiveRecord::Base
                          uid: auth.uid,
                          email: auth.info.email
                         )
-
     end
-    p auth.info.image
+
     user
+  end
+
+  def add_concert(concert_id)
+    if concert = Concert.find_by_id(concert_id)
+      self.concerts << concert unless self.concerts.include?(concert)
+    end
   end
 end

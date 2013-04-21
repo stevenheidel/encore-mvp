@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130420204702) do
+ActiveRecord::Schema.define(:version => 20130421031737) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -64,6 +64,11 @@ ActiveRecord::Schema.define(:version => 20130420204702) do
     t.datetime "picture_updated_at"
   end
 
+  create_table "concerts_users", :id => false, :force => true do |t|
+    t.integer "concert_id"
+    t.integer "user_id"
+  end
+
   create_table "posts", :force => true do |t|
     t.string   "network"
     t.string   "link"
@@ -77,6 +82,11 @@ ActiveRecord::Schema.define(:version => 20130420204702) do
     t.string   "image_url"
     t.string   "user_name"
     t.string   "user_image_url"
+  end
+
+  create_table "posts_users", :id => false, :force => true do |t|
+    t.integer "post_id"
+    t.integer "user_id"
   end
 
   create_table "users", :force => true do |t|

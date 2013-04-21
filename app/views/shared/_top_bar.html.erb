@@ -1,7 +1,12 @@
 <div id="menu" style="display:none">
   <h2>Encore</h2>
   <ul>
-    <% [["Profile", "/profile"], ["Live Stream", "/"], ["Concert Listings", "/"], ["Deals", "/"]].each do |page| %>
+    <% pages = []
+       pages << ["Profile", "/profile"]
+       pages << ["Live Stream", concert_path(session[:current_concert_id])] if session[:current_concert_id]
+       pages << ["Concert Listings", "/"]
+       pages << ["Deals", "/"]
+       pages.each do |page| %>
     <li><%= link_to page[0], page[1], data: {transition: "none"}, onclick: "jPM.close()" %></li>
     <% end %>
     <li><%= link_to 'Sign Out', destroy_user_session_path, method: 'delete' %></li>

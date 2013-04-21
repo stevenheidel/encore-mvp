@@ -4,5 +4,7 @@ class Post < ActiveRecord::Base
 
   belongs_to :concert
 
+  has_and_belongs_to_many :users, :uniq => true
+
   validates_uniqueness_of :link
 end

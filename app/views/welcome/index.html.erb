@@ -1,8 +1,10 @@
-<%= image_tag "login/bolt2.png", :class => "centre-image" %>
+<div data-role="content" id="homepage">
+  <%= image_tag "login/bolt2.png", :class => "centre-image" %>
 
-<p id="logintext"> 
-  Welcome to the exclusive preview of <br /> 
-  Encore, your concert app.
-</p>
+  <p id="logintext"> 
+    Welcome to the exclusive preview of <br /> 
+    Encore, your concert app.
+  </p>
 
-<%= link_to image_tag("login/facebook.png", :class => "centre-image"), user_omniauth_authorize_path(:facebook), data: {ajax: false} %>     
+  <%= link_to image_tag("login/facebook.png", :class => "centre-image"), user_omniauth_authorize_path(:facebook), data: {ajax: false} %> 
+</div> 

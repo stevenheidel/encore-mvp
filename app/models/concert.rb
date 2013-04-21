@@ -3,6 +3,7 @@ class Concert < ActiveRecord::Base
   attr_accessible :picture
 
   has_many :posts
+  has_and_belongs_to_many :users, :uniq => true
 
   has_attached_file :picture, styles: {
     thumb: '100x100>',
