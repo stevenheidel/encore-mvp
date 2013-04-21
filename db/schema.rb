@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130421213358) do
+ActiveRecord::Schema.define(:version => 20130421224213) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -87,6 +87,19 @@ ActiveRecord::Schema.define(:version => 20130421213358) do
   create_table "posts_users", :id => false, :force => true do |t|
     t.integer "post_id"
     t.integer "user_id"
+  end
+
+  create_table "setlists", :force => true do |t|
+    t.string   "song"
+    t.string   "artist"
+    t.string   "itunes"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
+    t.integer  "concert_id"
   end
 
   create_table "users", :force => true do |t|

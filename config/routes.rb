@@ -1,7 +1,9 @@
 EncoreMvp::Application.routes.draw do
   root :to => 'welcome#index', :as => :new_user_session # home is also login
 
-  resources :concerts, :only => [:index, :show]
+  resources :concerts, :only => [:index, :show] do
+    resources :setlists, :only => [:index]
+  end
 
   get 'profile' => 'welcome#profile'
 

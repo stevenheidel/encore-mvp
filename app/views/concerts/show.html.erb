@@ -1,25 +1,3 @@
-<div id="profilecover">
-  <table>
-    <tr>
-      <td>
-        <%= image_tag @concert.picture.url(:medium), :class => "artistprofilepic" %>
-      </td>
-      <td class="artistprofilename">
-        <strong><%= @concert.title %></strong>
-      </td>
-    </tr>
-  </table>
-</div>
-<div id="concertinfo">
-  <table>
-    <tr>
-      <td>
-        <p id="concertinfotext"><%= @concert.venue %>  |  <%= @concert.date.strftime("%B %d, %Y") %></p>
-      </td>
-      <td>
-        <a href="index.html" data-role="button" data-theme="reset2" data-icon="setlist" class="ios app-theme-none notext" />
-      </td>
-  </table>
-</div>
+<%= render :partial => "shared/concert_header", :locals => {:back_button => false} %>
 
 <%= render @concert.posts %>

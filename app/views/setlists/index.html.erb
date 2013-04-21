@@ -1,0 +1,23 @@
+<%= render :partial => "shared/concert_header", :locals => {:back_button => true} %>
+
+<div id="setlisttitle">
+  <h3> Setlist </h3>
+</div>
+
+<ul data-role="listview" data-split-icon="buybutton1" data-split-theme="d" data-inset="true">
+  <% @setlists.each.with_index(1) do |setlist, index| %>
+  <li>
+    <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop" />
+    <img src="images/albumart.jpg">
+    <h2><%= index %>. <%= setlist.song %></h2>
+    <p> <%= setlist.artist %> </p>  
+    <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Purchase song?</a>
+  </li>
+  <% end %>
+</ul>
+
+<div data-role="popup" id="purchase" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+  <h3>Sorry!</h3>
+  <p>Unfortunately we can't process your download right now. </p>
+  <a href="index.html" data-role="button" data-rel="back" data-theme="b" data-icon="delete" data-inline="true" data-mini="true"> Close </a>
+</div>

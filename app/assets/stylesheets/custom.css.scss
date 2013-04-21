@@ -400,3 +400,32 @@ padding-bottom: 7px;
   margin-left: auto;
   margin-right: auto
 }
+
+/* Setlists */
+
+.ui-icon-backred {
+    width:58px;
+    height: 24px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    box-shadow: none;
+    }
+
+.ui-icon-buybutton {
+    width:18px;
+    height: 18px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    box-shadow: none;
+    }
+
+.ui-icon-backred  {background-image: url('/assets/setlist/back.png');}
+.ui-icon-buybutton1 {background-image: url('/assets/setlist/buybutton1.png');}
+
+#setlisttitle{ 
+text-align: center;
+font-size: 20px;
+color: #919090;
+line-height: 10px;
+
+}

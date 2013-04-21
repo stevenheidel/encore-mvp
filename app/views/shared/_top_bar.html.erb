@@ -3,7 +3,7 @@
   <ul>
     <% pages = []
        pages << ["Profile", "/profile"]
-       pages << ["Live Stream", concert_path(session[:current_concert_id])] if session[:current_concert_id]
+       pages << ["Live Stream", concert_path(ENV["CURRENT_CONCERT_ID"])] if ENV["CURRENT_CONCERT_ID"]
        pages << ["Concert Listings", "/"]
        pages << ["Deals", "/"]
        pages.each do |page| %>
