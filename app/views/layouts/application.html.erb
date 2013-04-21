@@ -41,6 +41,19 @@
       <div data-role="content">
         <%= yield %>
       </div>
+
+      <div data-role="popup" id="popupMenu" data-theme="a">
+        <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+          <form>
+            <div style="padding:10px 20px;">
+              <h3 style="text-align:center;">We can email you or text you<br />when the app launches.</h3>
+              <input type="text" name="user" id="un" value="" placeholder="email" data-theme="a">
+              <input type="password" name="pass" id="pw" value="" placeholder="phone number" data-theme="a">
+              <button type="submit" data-theme="b">Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>

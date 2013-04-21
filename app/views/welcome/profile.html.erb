@@ -2,7 +2,7 @@
   <table>
     <tr>
       <td>
-        <div class="contentpic">
+        <div class="profilepic">
           <%= image_tag "http://graph.facebook.com/#{current_user.uid}/picture?width=120&height=120" %>
         </div>
       </td>
@@ -20,3 +20,10 @@
 <ul data-role="listview" data-inset="true" data-shadow="false" data-corners="false" id="concert-list">
   <%= render @concerts %>
 </ul>
+
+<p id="addmoretext">
+  Add more time capsules by <br />
+  signing up for our beta
+</p>
+
+<a href="#popupLogin" id="signupbutton" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-theme="a" data-transition="pop">Sign Up</a>
