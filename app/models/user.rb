@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :provider, :uid
   attr_accessible :name
+  attr_accessible :provided_email, :provided_phone
 
   has_and_belongs_to_many :concerts, :uniq => true
   has_and_belongs_to_many :posts, :uniq => true
@@ -28,5 +29,9 @@ class User < ActiveRecord::Base
     if concert = Concert.find_by_id(concert_id)
       self.concerts << concert unless self.concerts.include?(concert)
     end
+  end
+
+  def signed_up?
+    self.provided_email || self.provided_phone
   end
 end

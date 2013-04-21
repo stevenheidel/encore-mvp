@@ -1,12 +1,24 @@
 <div data-role="popup" id="popupMenu" data-theme="a">
   <div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
-    <form>
+    <form id="signupForm">
       <div style="padding:10px 20px;">
         <h3 style="text-align:center;">We can email you or text you<br />when the app launches.</h3>
-        <input type="text" name="user" id="un" value="" placeholder="email" data-theme="a">
-        <input type="password" name="pass" id="pw" value="" placeholder="phone number" data-theme="a">
+        <input type="text" name="email" id="email" value="" placeholder="email" data-theme="a">
+        <p style="text-align:center;margin:0px;">- OR -</p>
+        <input type="text" name="phone" id="phone" value="" placeholder="phone number" data-theme="a">
         <button type="submit" data-theme="b">Sign Up</button>
       </div>
     </form>
   </div>
 </div>
+
+<script>
+  $("#signupForm").submit(function(event) {
+    $.post("/signup", $("#signupForm").serialize(), function(data) {
+      $("#popupLogin").popup('close');
+      $("#addmoretext").text("Thanks for signing up!");
+      $("#signupbutton").hide();
+    });
+    return false;
+  });
+</script>

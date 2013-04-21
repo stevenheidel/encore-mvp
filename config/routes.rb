@@ -5,6 +5,8 @@ EncoreMvp::Application.routes.draw do
 
   get 'profile' => 'welcome#profile'
 
+  post 'signup' => 'users#signup'
+
   # route for Users and Facebook login
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   devise_scope :user do

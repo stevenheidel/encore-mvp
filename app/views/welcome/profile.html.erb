@@ -21,9 +21,15 @@
   <%= render @concerts %>
 </ul>
 
-<p id="addmoretext">
-  Add more time capsules by <br />
-  signing up for our beta
-</p>
+<% if current_user.signed_up? %>
+  <p id="addmoretext">
+    Thanks for signing up!
+  </p>
+<% else %>
+  <p id="addmoretext">
+    Add more time capsules by <br />
+    signing up for our beta
+  </p>
 
-<a href="#popupLogin" id="signupbutton" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-theme="a" data-transition="pop">Sign Up</a>
+  <a href="#popupLogin" id="signupbutton" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-theme="a" data-transition="pop">Sign Up</a>
+<% end %>
