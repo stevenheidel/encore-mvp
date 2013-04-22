@@ -111,6 +111,7 @@ a[data-role="button"][data-theme="reset2"].app-theme-none .ui-btn-inner {
     box-shadow: none;
     }
     
+    
 .ui-icon-options {background-image: url('images/optionsbutton.png');}
 .ui-icon-infobutton 	{background-image: url('images/infobutton.png');}
 .ui-icon-setlist	{background-image: url('images/setlist.png');}
