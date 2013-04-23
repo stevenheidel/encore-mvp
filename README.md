@@ -1,6 +1,7 @@
-mvp
-===
+Encore Minimum Viable Product
+=============================
 
-MVP Web App on Rails
+Mobile Web App on Rails
 
-Nick was here! Also, Annick is a scary biatch.
+http://getencor.re/
+http://mvp.encoretheapp.com/
