@@ -1,4 +1,7 @@
 ActiveAdmin.register Setlist do
+  belongs_to :concert
+  navigation_menu :concert
+
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Details" do
       f.input :song

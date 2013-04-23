@@ -1,4 +1,20 @@
 ActiveAdmin.register Concert do
+  index do   
+    selectable_column
+    column :id
+    column "Picture" do |concert|
+      link_to image_tag(concert.picture.url(:thumb)), admin_concert_posts_path(concert)
+    end                         
+    column :title                     
+    column :date        
+    column :venue           
+    default_actions           
+  end
+
+  filter :title
+  filter :date
+  filter :venue
+
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Details" do
       f.input :title
