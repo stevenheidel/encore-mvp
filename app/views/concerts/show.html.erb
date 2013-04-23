@@ -1,3 +1,19 @@
 <%= render :partial => "shared/concert_header", :locals => {:back_button => false} %>
 
 <%= render @concert.posts %>
+
+<script>
+  $('.heartpic').click(function(event) {
+    $.post("/favourite/" + event.target.id, function(data) {
+      var img = $("#" + event.target.id);
+      var src = img.attr('src');
+      if (src == "/assets/stream/heart.png") {
+        img.attr('src', '/assets/stream/heart-on.png');
+      }
+      else {
+        img.attr('src', '/assets/stream/heart.png');
+      }
+    });
+    return false;
+  });
+</script>

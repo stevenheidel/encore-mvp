@@ -25,13 +25,25 @@ class User < ActiveRecord::Base
     user
   end
 
-  def add_concert(concert_id)
-    if concert = Concert.find_by_id(concert_id)
+  def add_concert(concert)
+    if concert
       self.concerts << concert unless self.concerts.include?(concert)
     end
   end
 
   def signed_up?
     self.provided_email || self.provided_phone
+  end
+
+  def toggle_favourite(post)
+    if post
+      if self.posts.include?(post)
+        # Remove from favourites
+        self.posts.delete(post)
+      else
+        # Add to favourites
+        self.posts << post
+      end
+    end
   end
 end

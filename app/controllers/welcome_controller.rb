@@ -7,7 +7,8 @@ class WelcomeController < ApplicationController
   end
 
   def profile
-    current_user.add_concert(session[:current_concert_id])
+    concert = Concert.find_by_id(session[:current_concert_id])
+    current_user.add_concert(concert)
     @concerts = current_user.concerts
   end
 end

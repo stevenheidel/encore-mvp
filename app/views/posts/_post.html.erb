@@ -10,7 +10,11 @@
         <div class="phototext"><%= post.user_name %></div>
       </td>
       <td class="last">
-        <%= image_tag "stream/heart.png", :class => "heartpic" %>
+        <% if current_user.posts.include?(post) %>
+        <%= image_tag "stream/heart-on.png", :class => "heartpic", :id => post.id %>
+        <% else %>
+        <%= image_tag "stream/heart.png", :class => "heartpic", :id => post.id %>
+        <% end %>
       </td>
     </tr>
   </table>  
