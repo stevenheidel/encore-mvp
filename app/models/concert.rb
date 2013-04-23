@@ -4,6 +4,7 @@ class Concert < ActiveRecord::Base
 
   has_many :posts
   has_many :setlists
+  has_many :deals
   has_and_belongs_to_many :users, :uniq => true
 
   has_attached_file :picture, styles: {

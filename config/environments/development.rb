@@ -34,4 +34,7 @@ EncoreMvp::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Set the current concert ID (remember to make it a string)
+  ENV["CURRENT_CONCERT_ID"] = "1"
 end
