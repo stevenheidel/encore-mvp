@@ -1,0 +1,17 @@
+<div id="dealstitle">
+  <h3> Concert Listings </h3>
+</div>
+
+<ul data-role="listview" data-inset="true" data-theme="d" data-divider-theme="d">
+<% @listing_dates.each do |date, listings| %>
+  <li data-role="list-divider"><%= date %></li>
+
+  <% listings.each do |listing| %>
+  <li>
+    <%= image_tag listing.image(:thumb) %>
+    <h2>listing.title</h2>
+    <p><strong>listing.description</strong></p>
+  </li>
+  <% end %>
+<% end %>
+</ul>
