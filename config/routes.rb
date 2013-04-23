@@ -3,6 +3,7 @@ EncoreMvp::Application.routes.draw do
 
   resources :concerts, :only => [:index, :show] do
     resources :setlists, :only => [:index]
+    resources :deals, :only => [:index]
   end
 
   get 'profile' => 'welcome#profile'
