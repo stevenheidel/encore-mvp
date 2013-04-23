@@ -1,7 +1,7 @@
 namespace :scraper do 
   task :instagram => :environment do
-    unless ENV['current_concert'].to_i > 0
-      puts "Please specify ENV['current_concert']"
+    unless ENV['CURRENT_CONCERT_ID'].to_i > 0
+      puts "Please specify ENV['CURRENT_CONCERT_ID']"
       exit
     end
 

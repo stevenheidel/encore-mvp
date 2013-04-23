@@ -7,11 +7,11 @@
     $.post("/favourite/" + event.target.id, function(data) {
       var img = $("#" + event.target.id);
       var src = img.attr('src');
-      if (src == "/assets/stream/heart.png") {
-        img.attr('src', '/assets/stream/heart-on.png');
+      if (src.indexOf("heart-on") !== -1) {
+        img.attr('src', '/assets/stream/heart.png');
       }
       else {
-        img.attr('src', '/assets/stream/heart.png');
+        img.attr('src', '/assets/stream/heart-on.png');
       }
     });
     return false;

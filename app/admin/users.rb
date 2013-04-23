@@ -1,5 +1,6 @@
 ActiveAdmin.register User do
   index do
+    selectable_column
     column :id
     column :email
     column :current_sign_in_at
