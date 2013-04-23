@@ -9,6 +9,13 @@
 
     <link href="style.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Open+Sans' />
+    <script type="text/javascript">
+    $(function() {
+ $('.menulink').click(function(e){
+     e.preventDefault();
+   $("#heartpic").attr('src',"images/heart-on.png");
+ });
+});</script>
   </head>
   <body>
     <div data-role="page">
@@ -37,7 +44,7 @@
         <div data-role="content">
         
         
-        <div id="photobar"><table class="picturelabel"><tr><td class="first"><img class="contentpic" src="images/passionpit.png"/></td><td><div class="phototext">Nick Klimchuk</div></td><td class="last"><img class="heartpic" src="images/heart.png"/></td><tr></table>  
+        <div id="photobar"><table class="picturelabel"><tr><td class="first"><img class="contentpic" src="images/passionpit.png"/></td><td><div class="phototext">Nick Klimchuk</div></td><td class="last"><a href="" title="Switch" class="menulink"><img class="heartpic" src="images/heart.png" id="heartpic"/></a></td><tr></table>  
         </div>
         <div id="photo"><img class="photostream" src="images/concertphoto.png"></div>
     
