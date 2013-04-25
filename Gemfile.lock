@@ -102,10 +102,6 @@ GEM
     geocoder (1.1.6)
     has_scope (0.5.1)
     hashie (2.0.3)
-    heroku_rails_deflate (1.0.0)
-      actionpack (~> 3.2.13)
-      activesupport (~> 3.2.13)
-      rack (~> 1.4.5)
     hike (1.2.1)
     httpauth (0.2.0)
     i18n (0.6.1)
@@ -243,7 +239,6 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   geocoder
-  heroku_rails_deflate
   inherited_resources
   instagram
   jquery-rails

@@ -7,8 +7,8 @@ AssetSync.configure do |config|
   # Increase upload performance by configuring your region
   # config.fog_region = 'eu-west-1'
   #
-  # Don't delete files from the store
-  # config.existing_remote_files = "keep"
+  # Delete files from the store
+  config.existing_remote_files = "delete"
   #
   # Automatically replace files with their equivalent gzip compressed version
   config.gzip_compression = true
