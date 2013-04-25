@@ -3,3 +3,6 @@ typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var
 b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
 mixpanel.init("93c59284426849460ef74f823c6f0bab");
 
+$("#homepage a").click(function() {
+  mixpanel.track("Clicked 'Log in with Facebook'");
+});

@@ -3,7 +3,7 @@
 <%= render :partial => "shared/concert_header", :locals => {:back_button => true} %>
 
 <ul data-role="listview" data-split-icon="buybutton1" data-split-theme="d" data-inset="true" data-corners="false">
-  <% @setlists.reverse.each.with_index(1) do |setlist, index| %>
+  <% @setlists.each.with_index(1) do |setlist, index| %>
   <li>
     <a href="<%= setlist.itunes %>" target="_blank">
       <%= image_tag setlist.picture.url(:thumb) %>
