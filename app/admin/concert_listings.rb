@@ -7,6 +7,7 @@ ActiveAdmin.register ConcertListing do
     end
     column :title
     column :description
+    column :date
     default_actions
   end
 
@@ -14,6 +15,7 @@ ActiveAdmin.register ConcertListing do
     f.inputs "Details" do
       f.input :title
       f.input :description
+      f.input :date
       f.input :picture, :as => :file, :hint => f.template.image_tag(f.object.picture.url(:thumb))
     end
     f.actions

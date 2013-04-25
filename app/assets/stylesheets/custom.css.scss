@@ -93,9 +93,14 @@ a[data-role="button"][data-theme="reset2"].app-theme-none .ui-btn-inner {
 #profilecover {
 	margin: -15px -15px 15px -15px;
 	height: 130px;
-	@include linear-gradient(#363636, #181818);
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
   padding: 10px;
+
+  background: url('/assets/profile/crowd.png') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .profilename {
@@ -131,6 +136,15 @@ a[data-role="button"][data-theme="reset2"].app-theme-none .ui-btn-inner {
 	color: rgba(255,255,255,1);
 	line-height: 10px;
 	padding-bottom:10px;
+}
+
+.city img {
+  float: left;
+}
+
+.city p {
+  padding-top: 3px;
+  margin: 2px;
 }
 
 #addmoretext {
@@ -256,6 +270,19 @@ a[data-role="button"][data-theme="reset2"].app-theme-none .ui-btn-inner {
 
 /* Live stream */
 
+#concertcover {
+  margin: -15px -15px 15px -15px;
+  height: 130px;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+  padding: 10px;
+
+  background: url('/assets/stream/htdaback.png') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 #concertinfo {
 	background: #FFFFFF;
 	-moz-box-shadow:    0px 2px 4px 0px rgba(0,0,0,0.50);
@@ -335,11 +362,12 @@ padding-bottom: 7px;
 }
 
 .heartpic {
-  width:30px;
-  height:30px;
-  text-align:right;
+  width: 2.2rem;
+  height: 2.1rem;
+  text-align: right;
   white-space: nowrap;
-  padding-bottom: 5px;
+  padding-bottom: 0.1rem;
+  padding-right: 0.4rem;
 }
 
 #photo {
@@ -422,17 +450,9 @@ padding-bottom: 7px;
 .ui-icon-backred  {background-image: url('/assets/setlist/back.png');}
 .ui-icon-buybutton1 {background-image: url('/assets/setlist/buybutton1.png');}
 
-#setlisttitle{ 
-text-align: center;
-font-size: 20px;
-color: #919090;
-line-height: 10px;
+/* Listings page */
 
-}
-
-/* Deals page */
-
-#dealstitle {
+#listingstitle {
 text-align: center;
 font-size: 30px;
 color: #FF374A;

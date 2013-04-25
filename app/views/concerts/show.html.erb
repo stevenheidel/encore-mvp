@@ -1,6 +1,6 @@
 <%= render :partial => "shared/concert_header", :locals => {:back_button => false} %>
 
-<%= render @concert.posts %>
+<%= render @concert.posts.published %>
 
 <script>
   $('.heartpic').click(function(event) {

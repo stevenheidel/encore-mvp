@@ -10,7 +10,7 @@
         <strong><%= current_user.name %></strong>
         <div class="city">
           <%= image_tag "profile/locationmarker.png" %>
-          <p><%= request.location.city rescue nil %></p>
+          <p><%= request.location.city rescue "Toronto" %>Toronto</p>
         </div>
       </td>
     </tr>
