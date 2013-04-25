@@ -7,7 +7,15 @@ group :development do
 end
 
 group :production do
+  # PostgreSQL Add-on
   gem 'pg'
+
+  # New Relic Add-on
+  gem 'newrelic_rpm'
+
+  # Memcachier Add-on
+  gem 'memcachier'
+  gem 'dalli'
 end
 
 # Gems used only for assets and not required in production environments by default.
