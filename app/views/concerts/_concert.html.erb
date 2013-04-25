@@ -3,8 +3,8 @@
   <%= link_to concert do %>
   <%= image_tag concert.picture.url(:thumb) %>
   <h3><%= concert.title %></h3>
-  <p><strong><%= concert.venue %></strong></p>
-  <p><%= concert.date.strftime("%B %d, %Y") %></p>
+  <p class="venue"><%= concert.venue %></p>
+  <p class="date"><%= concert.date.strftime("%B %d, %Y") %></p>
   <% end %>
 </li>
 <% end %>
