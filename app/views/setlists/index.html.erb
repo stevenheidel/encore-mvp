@@ -4,7 +4,7 @@
   <% @setlists.reverse.each.with_index(1) do |setlist, index| %>
   <li>
     <a href="<%= setlist.itunes %>" target="_blank">
-      <img src="images/albumart.jpg">
+      <%= image_tag setlist.picture.url(:thumb) %>
       <h2><%= index %>. <%= setlist.song %></h2>
       <p> <%= setlist.artist %> </p>  
       <a href="<%= setlist.itunes %>" target="_blank"></a>
