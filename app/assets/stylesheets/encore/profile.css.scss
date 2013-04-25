@@ -46,6 +46,11 @@
 
     margin-bottom: 15px;
 
+    // hack to fix double shadow on last list item
+    .ui-last-child {
+      border-bottom-width: 0px !important;
+    }
+
     img {
       width: 110px;
       height: 110px;

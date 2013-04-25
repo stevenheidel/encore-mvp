@@ -1,8 +1,11 @@
+// Must be outside to reference everywhere
+var jPM;
+
 // Equivalent to jQuery 
 $(document).bind('pageinit', function() {
 
   // Turn on jPqanel Menu and fix for Android
-  var jPM = jPM || $.jPanelMenu({
+  jPM = jPM || $.jPanelMenu({
     beforeOpen: function() {
       $("#menu-trigger").removeClass("menu-trigger");
     },
