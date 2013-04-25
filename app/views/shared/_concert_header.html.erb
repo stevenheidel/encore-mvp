@@ -1,27 +1,17 @@
-<div id="concertcover">
-  <table>
-    <tr>
-      <td>
-        <%= image_tag @concert.picture.url(:medium), :class => "artistprofilepic" %>
-      </td>
-      <td class="artistprofilename">
-        <strong><%= @concert.title %></strong>
-      </td>
-    </tr>
-  </table>
-</div>
-<div id="concertinfo">
-  <table>
-    <tr>
-      <td>
-        <p id="concertinfotext"><%= @concert.venue %>  |  <%= @concert.date.strftime("%B %d, %Y") %></p>
-      </td>
-      <td>
-        <% if back_button %>
-        <a href="<%= parent_url %>" data-role="button" data-theme="reset2" data-icon="backred" class="ios app-theme-none notext">
-        <% else %>
-        <a href="<%= resource_url %>/setlists" data-role="button" data-theme="reset2" data-icon="setlist" class="ios app-theme-none notext" />
-        <% end %>
-      </td>
-  </table>
+<div id="concertheader">
+  <div class="concertcover">
+    <%= image_tag @concert.picture.url(:medium) %>
+    <h2><%= @concert.title %></h2>
+  </div>
+  <div class="concertinfo">
+    <p>
+      <%= @concert.venue %>  |  <%= @concert.date.strftime("%B %d, %Y") %>
+      
+      <% if back_button %>
+      <a href="<%= parent_url %>" data-role="button" data-inline="true" data-theme="reset2" class="ios app-theme-none notext"></a>
+      <% else %>
+      <a href="<%= resource_url %>/setlists" data-role="button" data-inline="true" data-theme="reset2" class="ios app-theme-none notext"></a>
+      <% end %>
+    </p>
+  </div>
 </div>

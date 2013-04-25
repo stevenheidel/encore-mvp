@@ -1,42 +1,54 @@
-#concertcover {
-  margin: -15px -15px 15px -15px;
-  height: 130px;
-  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
-  padding: 10px;
+#concertheader {
+  .concertcover {
+    margin: -15px -15px 15px -15px;
+    height: 80px;
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+    padding: 5px;
 
-  background: url('/assets/stream/htdaback.png') no-repeat center center; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
+    @include encore-background('/assets/stream/htdaback.png');
 
-#concertinfo {
-  background: #FFFFFF;
-  -moz-box-shadow:    0px 2px 4px 0px rgba(0,0,0,0.50);
-  -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
-  box-shadow:         0px 2px 4px 0px rgba(0,0,0,0.50);
-  bottom: 20px;
-  margin: -15px -15px 15px -15px;
-}
+    img {
+      position: absolute; // needed to overlay text underneath
+      margin-right: 5px;
 
-#concertinfotext {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 13px;
-  color: #4A4A4A;
-  padding-left: 155px;
-  margin-top: 5px;
-  padding-top: 2px;
-  margin-bottom: 5px;
-}
+      width: 100px;
+      height: 100px;
+    }
 
-.ui-icon-setlist {
-  width:58px;
-  height: 24px;
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
-  box-shadow: none;
-  background-image: url('/assets/stream/setlist.png');
+    h2 {
+      margin-left: 100px;
+      margin-top: 5px;
+
+      color: white;
+      font-size: 3.1rem;
+      text-shadow: 0px 2px 5px rgba(0,0,0,0.50);
+    }
+  }
+
+  .concertinfo {
+    background: #FFFFFF;
+    -moz-box-shadow:    0px 2px 4px 0px rgba(0,0,0,0.50);
+    -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+    box-shadow:         0px 2px 4px 0px rgba(0,0,0,0.50);
+    margin: -15px -15px 15px -15px;
+
+    p {
+      margin-left: 20px;
+      padding-top: 3px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #4A4A4A;
+    }
+
+    .ui-btn {
+      width: 58px;
+      height: 24px;
+      background-color: rgba(0, 0, 0, 0);
+      border: none;
+      box-shadow: none;
+      background-image: url('/assets/stream/setlist.png');
+    }
+  }
 }
 
 #photobar {
@@ -111,28 +123,4 @@ padding-bottom: 7px;
 
 .photostream {
   width:372px;
-}
-
-.artistprofilename {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 31px;
-  color: rgba(255,255,255,1);
-  line-height: 35px;
-  text-shadow: 0px 2px 5px rgba(0,0,0,0.50);
-  padding-left: 10px;
-  padding-bottom: 20px;
-}
-
-.artistprofilepic {
-  width:165px;
-  height:165px;
-  padding-left:3px;
-}
-
-.artistpic {
-  width:110px;
-  height:110px;
-  padding-top:20px;
-  padding-left:10px;
-  z-index:1;
 }

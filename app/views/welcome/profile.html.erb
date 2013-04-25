@@ -6,7 +6,7 @@
   <div class="profiletext">
     <p class="name"><%= current_user.name %></p>
     <%= image_tag "profile/locationmarker.png" %>
-    <p class="city"><%= request.location.city rescue "Toronto" %>Toronto</p>
+    <p class="city"><%= request.location.city rescue "Toronto" %></p>
   </div>
 </div>
 
@@ -14,7 +14,7 @@
   <%= render @concerts %>
 </ul>
 
-<% if current_user.signed_up? %>
+<% unless current_user.signed_up? %>
   <p id="addmoretext">
     Thanks for signing up!
   </p>

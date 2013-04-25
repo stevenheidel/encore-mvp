@@ -5,8 +5,8 @@ html {
   font-size: 62.5%; // see http://snook.ca/archives/html_and_css/font-size-with-rem
 }
 
-.ui-body-c {
-  font-family: 'Open Sans', sans-serif;
+body {
+  font-family: 'Open Sans', sans-serif !important;
   font-size: 1.8rem;
 }
 
@@ -23,6 +23,14 @@ html {
           border-radius: $width/2;
 
   overflow: hidden;
+}
+
+@mixin encore-background($url) {
+  background: url($url) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /* BUTTONS */

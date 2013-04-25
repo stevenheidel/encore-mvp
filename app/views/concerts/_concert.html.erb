@@ -1,7 +1,8 @@
 <li>
-  <%= image_tag concert.picture.url(:thumb), :class => "artistpic" %>
+  <%= link_to concert do %>
+  <%= image_tag concert.picture.url(:thumb) %>
   <h3><%= concert.title %></h3>
   <p><strong><%= concert.venue %></strong></p>
   <p><%= concert.date.strftime("%B %d, %Y") %></p>
-  <p class="ui-li-aside"><%= link_to "Relive", concert, data: {role: 'button'} %></p>
+  <% end %>
 </li>
