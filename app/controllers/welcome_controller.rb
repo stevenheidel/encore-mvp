@@ -4,7 +4,7 @@ class WelcomeController < ApplicationController
   def index
     # FOR TESTING, reload the welcome page to automagically log in
     if Rails.env.development? and true
-      sign_in(:user, User.find_by_id(2)) if session[:test]
+      sign_in(:user, User.find_by_id(3)) if session[:test]
       session[:test] = true
     end
 
