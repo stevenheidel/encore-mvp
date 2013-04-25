@@ -56,6 +56,10 @@ module EncoreMvp
     # Enable the asset pipeline
     config.assets.enabled = true
 
+    # Set yui compressor instead
+    config.assets.css_compressor = :yui
+    config.assets.js_compressor  = :yui
+
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
   end
