@@ -8,6 +8,9 @@ end
 
 group :production do
   gem 'pg'
+
+  # Enable asset compression on Heroku
+  gem 'heroku_rails_deflate'
 end
 
 # Gems used only for assets and not required in production environments by default.
