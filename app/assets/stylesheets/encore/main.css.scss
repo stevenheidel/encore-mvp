@@ -18,9 +18,9 @@ body {
   height: $width;
   border: solid $border-width white;
 
-  -webkit-border-radius: $width/2;
-     -moz-border-radius: $width/2;
-          border-radius: $width/2;
+  -moz-border-radius: #{$width/2}/#{$width/2};
+  -webkit-border-radius: #{$width/2} #{$width/2};
+  border-radius: #{$width/2}/#{$width/2};
 
   overflow: hidden;
 }

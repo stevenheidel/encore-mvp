@@ -1,4 +1,4 @@
-<% cache ["v1", "top-bar"] do %>
+<% cache ["v2", "top-bar"] do %>
 <div id="menu">
   <h2>Encore</h2>
   <ul>
@@ -16,9 +16,9 @@
 </div>
 
 <div data-role="header" id="top-bar">
-  <a href="#menu" data-icon="bars" id="menu-trigger" class="menu-trigger">Menu</a>
+  <a href="#menu" id="menu-trigger" data-role="button" data-theme="reset" data-icon="options" class="ios app-theme-none notext menu-trigger"></a>
   <div class="bolt"><%= image_tag "shared/bolt.png" %></div>
-  <a data-icon="info">Info</a>
+  <a href="#" data-role="button" data-theme="reset" data-icon="infobutton" class="ios app-theme-none notext"></a>
   <span class="ui-title" />
 </div>
 <% end %>

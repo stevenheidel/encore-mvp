@@ -8,9 +8,9 @@
       <%= @concert.venue %>  |  <%= @concert.date.strftime("%B %d, %Y") %>
       
       <% if back_button %>
-      <a href="<%= parent_url %>" data-role="button" data-inline="true" data-theme="reset2" class="ios app-theme-none notext ui-button-backred"></a>
+      <a href="<%= parent_url %>" data-role="button" data-inline="true" data-theme="reset2" class="ios app-theme-none notext backred"></a>
       <% else %>
-      <a href="<%= resource_url %>/setlists" data-role="button" data-inline="true" data-theme="reset2" class="ios app-theme-none notext"></a>
+      <a href="<%= resource_url %>/setlists" data-role="button" data-inline="true" data-theme="reset2" class="ios app-theme-none notext setlist"></a>
       <% end %>
     </p>
   </div>
