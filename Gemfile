@@ -9,7 +9,7 @@ end
 group :production do
   gem 'pg'
 
-  # Enable asset compression on Heroku
+  # Enable asset compression and CDN serving on Heroku
   gem 'heroku_rails_deflate'
 end
 
@@ -19,6 +19,9 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   
   gem 'uglifier', '>= 1.0.3'
+
+  # Sync assets to CDN
+  gem 'asset_sync'
 end
 
 # Javascript asset libraries
