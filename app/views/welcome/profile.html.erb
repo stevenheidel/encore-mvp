@@ -1,3 +1,4 @@
+<% cache current_user do %>
 <div id="profilecover">
   <div class="profilepic">
     <%= image_tag "http://graph.facebook.com/#{current_user.uid}/picture?width=80&height=80" %>
@@ -25,4 +26,5 @@
   </p>
 
   <a href="#popupLogin" id="signupbutton" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-theme="a" data-transition="pop">Sign Up</a>
+<% end %>
 <% end %>

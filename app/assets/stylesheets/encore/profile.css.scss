@@ -37,6 +37,11 @@
 }
 
 #concert-list {
+  // hack to fix double shadow on last list item
+  .ui-last-child {
+    border-bottom-width: 0px !important;
+  }
+
   .ui-li {
     @include linear-gradient(#FFFFFF, #DDDDDD);
     
@@ -44,12 +49,7 @@
     -webkit-box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.50);
     box-shadow:         0px 2px 4px 0 rgba(0,0,0,0.50);
 
-    margin-bottom: 15px;
-
-    // hack to fix double shadow on last list item
-    .ui-last-child {
-      border-bottom-width: 0px !important;
-    }
+    margin-bottom: 15px;    
 
     img {
       width: 110px;

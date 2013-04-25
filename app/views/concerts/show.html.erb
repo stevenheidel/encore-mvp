@@ -1,5 +1,7 @@
+<% cache @concert do %>
 <%= render :partial => "shared/concert_header", :locals => {:back_button => false} %>
 
 <ul data-role="listview" data-inset="true" data-shadow="false" data-corners="false" id="concert-stream">
-  <%= render @concert.posts.published %>
+  <%= render partial: 'posts/post', collection: @concert.posts.published %>
 </ul>
+<% end %>

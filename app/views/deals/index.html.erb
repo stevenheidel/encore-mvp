@@ -1,3 +1,4 @@
+<% cache @deal_categories do %>
 <ul data-role="listview" data-split-icon="buybutton1" data-split-theme="d" data-inset="true" data-divider-theme="d" data-corners="false">
 <% @deal_categories.each do |category, deals| %>
   <li data-role="list-divider"> <%= category %> </li>
@@ -19,3 +20,4 @@
   <p>Unfortunately we can't process this deal right now. </p>
   <a href="index.html" data-role="button" data-rel="back" data-theme="b" data-icon="delete" data-inline="true" data-mini="true"> Close </a>
 </div>
+<% end %>

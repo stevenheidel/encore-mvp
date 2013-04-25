@@ -1,3 +1,4 @@
+<% cache concert do %>
 <li>
   <%= link_to concert do %>
   <%= image_tag concert.picture.url(:thumb) %>
@@ -6,3 +7,4 @@
   <p><%= concert.date.strftime("%B %d, %Y") %></p>
   <% end %>
 </li>
+<% end %>

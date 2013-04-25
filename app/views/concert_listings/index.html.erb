@@ -1,7 +1,4 @@
-<div id="listingstitle">
-  <h3> Concert Listings </h3>
-</div>
-
+<% cache @listings do %>
 <ul data-role="listview" data-inset="true" data-theme="d" data-divider-theme="d" data-corners="false">
 <% @listing_dates.each do |date, listings| %>
   <li data-role="list-divider"><%= date.strftime("%B %d, %Y") %></li>
@@ -15,3 +12,4 @@
   <% end %>
 <% end %>
 </ul>
+<% end %>

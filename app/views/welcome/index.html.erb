@@ -1,3 +1,4 @@
+<% cache ["v1", "login-page"] do %>
 <div data-role="content" id="homepage">
   <%= image_tag "login/bolt2.png" %>
 
@@ -5,3 +6,4 @@
 
   <%= link_to image_tag("login/facebook.png"), user_omniauth_authorize_path(:facebook), data: {ajax: false} %> 
 </div> 
+<% end %>

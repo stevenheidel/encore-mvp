@@ -1,3 +1,5 @@
+<% cache @setlists do %>
+
 <%= render :partial => "shared/concert_header", :locals => {:back_button => true} %>
 
 <ul data-role="listview" data-split-icon="buybutton1" data-split-theme="d" data-inset="true" data-corners="false">
@@ -12,3 +14,5 @@
   </li>
   <% end %>
 </ul>
+
+<% end %>
