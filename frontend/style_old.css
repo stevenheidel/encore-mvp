@@ -111,59 +111,41 @@ a[data-role="button"][data-theme="reset2"].app-theme-none .ui-btn-inner {
     box-shadow: none;
     }
     
-.ui-icon-viewbutton {
-    width:82px;
-    height: 32px;
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    box-shadow: none;
-    }
-
-.ui-icon-signupbutton {
-    width:82px;
-    height: 32px;
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    box-shadow: none;
-    }
     
 .ui-icon-options {background-image: url('images/optionsbutton.png');}
 .ui-icon-infobutton 	{background-image: url('images/infobutton.png');}
 .ui-icon-setlist	{background-image: url('images/setlist.png');}
 .ui-icon-backred	{background-image: url('images/back.png');}
 .ui-icon-buybutton1	{background-image: url('images/buybutton1.png');}
-.ui-icon-viewbutton	{background-image: url('images/viewbut.png');}
-.ui-icon-signupbutton {background-image: url('images/signupbut.png');}
 
 .profilename {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 1.7rem;
+	font-size: 26px;
 	color: rgba(255,255,255,1);
-	line-height: 2.2rem;
+	line-height: 35px;
 	text-shadow: 0px 2px 5px rgba(0,0,0,0.50);
 	padding-left: 10px;
-	padding-bottom: 3px;
+	padding-bottom: 2px;
     }
 
 .artistprofilename {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 1.8rem;
+	font-size: 31px;
 	color: rgba(255,255,255,1);
-	line-height: 1.9rem;
+	line-height: 35px;
 	text-shadow: 0px 2px 5px rgba(0,0,0,0.50);
 	padding-left: 10px;
 	padding-bottom: 20px;
     }
 
 .profilepic {
-    -moz-border-radius: 130px/130px;
-    -webkit-border-radius: 130px 130px;
-    border-radius: 130px/130px;
+    -moz-border-radius: 110px/110px;
+    -webkit-border-radius: 110px 110px;
+    border-radius: 110px/110px;
     border:solid 3.5px #fff; 
-    width:130px;
-    height:130px;
+    width:110px;
+    height:110px;
     z-index:1;
-    
 }
 
 .artistprofilepic {
@@ -175,14 +157,14 @@ width:165px;
 .artistpic {
 	width:110px;
 	height:110px;
-	padding-top:8px;
+	padding-top:20px;
 	padding-left:10px;
 	z-index:1;
 }
 
 .city {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 0.9rem;
+	font-size: 14px;
 	color: rgba(255,255,255,1);
 	line-height: 10px;
 	padding-bottom:10px;
@@ -196,26 +178,25 @@ width:165px;
 
 #concert-list h3 {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 1.1rem;
+	font-size: 28px;
 	color: rgba(74,74,74,1);
 	margin-top: 0.3em;
 	margin-bottom: 0.2em;
-    
 }
 
 #concert-list strong {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 0.9rem;
+	font-size: 17px;
 	color: rgba(155,155,155,1);
-	
+	line-height: 22px;
 
 }
 
 #concert-list p {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 0.7rem;
+	font-size: 13px;
 	color: rgba(155,155,155,1);
-
+	line-height: 17px;
 }
 
 #concert-list .ui-li-aside {
@@ -237,12 +218,15 @@ width:165px;
 
 #profilecover {
 	padding: -20px;
-	width:100%; height:130px; background-image:url("images/htdaback.png");
-}
-
-#profilecover2 {
-	padding: -20px;
-	width:100%; height:160px; background-image:url("images/crowd.png");
+	width:100%; height:130px; background-image: -o-linear-gradient(-90deg, #181818 0%, #363636 0%, #181818 100%);
+        background-image: -moz-linear-gradient(-90deg, #181818 0%, #363636 0%, #181818 100%);
+        background-image: -webkit-linear-gradient(-90deg, #181818 0%, #363636 0%, #181818 100%);
+        background-image: -ms-linear-gradient(-90deg, #181818 0%, #363636 0%, #181818 100%);
+        background-image: linear-gradient(-180deg, #181818 0%, #363636 0%, #181818 100%);
+           
+        -moz-box-shadow:    0px 2px 4px 0px rgba(0,0,0,0.50);
+        -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+        box-shadow:         0px 2px 4px 0px rgba(0,0,0,0.50);
 }
 
 
@@ -259,7 +243,7 @@ z-index:-1;
 #concertinfotext {
 
 font-family: Open Sans;
-font-size: 0.8rem;
+font-size: 13px;
 color: #4A4A4A;
 line-height: 20px;
 padding-left: 155px;
@@ -269,7 +253,7 @@ z-index: 1;
 }
 
 #photobar {
-width:23.29rem; height:3.6rem;
+width:372px; height:55px;
 background-image: -o-linear-gradient(-91deg, #E9E9E9 0%, #FFFFFF 100%);
 background-image: -moz-linear-gradient(-91deg, #E9E9E9 0%, #FFFFFF 100%);
 background-image: -webkit-linear-gradient(-91deg, #E9E9E9 0%, #FFFFFF 100%);
@@ -280,8 +264,6 @@ background-image: linear-gradient(-181deg, #E9E9E9 0%, #FFFFFF 100%);
 -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
 box-shadow:         0px 2px 4px 0px rgba(0,0,0,0.50);
 white-space:nowrap;
-margin-left: auto;
-margin-right: auto;
 
 }
 
@@ -300,7 +282,7 @@ td.last {
 
 .phototext {
 font-family: Open Sans;
-font-size: 1.2rem;
+font-size: 24px;
 color: #8A8A8A;
 text-align: left;
 padding-left:5px;
@@ -316,12 +298,11 @@ padding-bottom: 7px;
 }
 
 .heartpic {
-    width:2.2rem;
-    height:2.1rem;
+    width:30px;
+    height:30px;
     text-align:right;
     white-space: nowrap;
-    padding-bottom: 0.1rem;
-    padding-right: 0.4rem;
+    padding-bottom: 5px;
 
 }
     
@@ -336,15 +317,12 @@ background-image: linear-gradient(-181deg, #E9E9E9 0%, #FFFFFF 100%);
 -moz-box-shadow:    0px 2px 4px 0px rgba(0,0,0,0.50);
 -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
 box-shadow:         0px 2px 4px 0px rgba(0,0,0,0.50);
-margin-left: auto;
-margin-right: auto;
 
 } 
 
 .photostream {
 	width:372px;
 	height:372px;
-    
 }
     
 .loginbody {background-color:#b0c4de;}
@@ -410,24 +388,5 @@ text-align: center;
 font-size: 30px;
 color: #FF374A;
 line-height: 0px;
-
-}
-
-#dealscover {
-    
-	width:100%; height:70px; background-image: -o-linear-gradient(-90deg, #181818 0%, #363636 0%, #181818 100%);
-        background-image: -moz-linear-gradient(-90deg, #181818 0%, #363636 0%, #181818 100%);
-        background-image: -webkit-linear-gradient(-90deg, #181818 0%, #363636 0%, #181818 100%);
-        background-image: -ms-linear-gradient(-90deg, #181818 0%, #363636 0%, #181818 100%);
-        background-image: linear-gradient(-180deg, #181818 0%, #363636 0%, #181818 100%);
-           
-        -moz-box-shadow:    0px 2px 4px 0px rgba(0,0,0,0.50);
-        -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
-        box-shadow:         0px 2px 4px 0px rgba(0,0,0,0.50);
-        
-}
-
-#backgroundimg{
-background-image:url('images/4.jpg');
 
 }
