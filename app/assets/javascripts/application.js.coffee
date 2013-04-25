@@ -4,4 +4,6 @@
 
 #= require jquery.jpanelmenu
 
+#= require encore
+
 #= require mixpanel

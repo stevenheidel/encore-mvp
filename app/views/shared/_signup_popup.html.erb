@@ -11,14 +11,3 @@
     </form>
   </div>
 </div>
-
-<script>
-  $("#signupForm").submit(function(event) {
-    $.post("/signup", $("#signupForm").serialize(), function(data) {
-      $("#popupLogin").popup('close');
-      $("#addmoretext").text("Thanks for signing up!");
-      $("#signupbutton").hide();
-    });
-    return false;
-  });
-</script>

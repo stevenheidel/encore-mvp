@@ -3,12 +3,3 @@
 <ul data-role="listview" data-inset="true" data-shadow="false" data-corners="false" id="concert-stream">
   <%= render @concert.posts.published %>
 </ul>
-
-<script>
-  $('.heartpic').click(function(event) {
-    $.post("/favourite/" + event.target.id, function(data) {
-      $("#" + event.target.id).toggleClass('on');
-    });
-    return false;
-  });
-</script>

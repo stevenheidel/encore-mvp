@@ -14,26 +14,8 @@
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <%= javascript_include_tag "application" %>
-    <script src="https://raw.github.com/davidpaulsson/jPanelMenu/1380ce5ad274e05d3330ae821726fa66058c7411/jquery.jpanelmenu.js"></script>
 
     <%= csrf_meta_tags %>
-
-    <script>
-      var jPM;
-      $(document).bind('pageinit', function() {
-        jPM = jPM || $.jPanelMenu({
-          beforeOpen: function() {
-            $("#menu-trigger").removeClass("menu-trigger");
-          },
-          afterClose: function() {
-            $("#menu-trigger").addClass("menu-trigger");
-          },
-          animation: true
-        });
-        jPM.off();
-        jPM.on();
-      });
-    </script>
   </head>
   <body>
     <div data-role="page">
