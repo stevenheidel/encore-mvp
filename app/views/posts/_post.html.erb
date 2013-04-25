@@ -1,27 +1,11 @@
-<div class="post">
-  <div id="photobar">
-    <table class="picturelabel">
-      <tr>
-        <td class="first">
-          <div class="contentpic">
-            <%= image_tag post.user_image_url %>
-          </div>
-        </td>
-        <td>
-          <div class="phototext"><%= post.user_name %></div>
-        </td>
-        <td class="last">
-          <% if current_user.posts.include?(post) %>
-          <%= image_tag "stream/heart-on.png", :class => "heartpic", :id => post.id %>
-          <% else %>
-          <%= image_tag "stream/heart.png", :class => "heartpic", :id => post.id %>
-          <% end %>
-        </td>
-      </tr>
-    </table>  
+<li>
+  <div class="profilepic">
+    <%= image_tag post.user_image_url %>
   </div>
 
-  <div id="photo">
-    <%= image_tag post.image_url, :class => "photostream" %>
-  </div>
-</div>
+  <div class="heartpic <%= "on" if current_user.posts.include?(post) %>" id="<%= post.id %>"></div>
+
+  <h3><%= post.user_name %></h3>
+
+  <p><%= image_tag post.image_url %></p>
+</li>
