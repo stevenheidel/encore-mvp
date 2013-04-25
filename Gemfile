@@ -19,12 +19,14 @@ group :assets do
 
   # Sync assets to CDN
   gem 'asset_sync'
-end
 
-# Javascript asset libraries
-# TODO: put these in :assets group
-gem 'jquery-rails'
-gem 'jquery_mobile_rails'
+  # Javascript asset libraries
+  gem 'jquery-rails'
+  gem 'jquery_mobile_rails'
+
+  # for SCSS mixins
+  gem 'bourbon'
+end
 
 # Use unicorn as the app server
 gem 'unicorn'
@@ -52,9 +54,6 @@ gem 'cache_digests'
 
 # for determining the city
 gem 'geocoder'
-
-# for SCSS mixins
-gem 'bourbon'
 
 # for image uploads
 gem 'paperclip'
