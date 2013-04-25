@@ -1,0 +1,112 @@
+#profilecover {
+  margin: -15px -15px 15px -15px; // stretch to entire body
+  height: 130px;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+  padding: 10px;
+
+  background: url('/assets/profile/crowd.png') no-repeat center center; 
+  background-size: cover;
+
+  color: white;
+
+  .profilepic {
+    @include encore-circle(120px, 3px);
+    float: left;
+    margin-right: 15px;
+  }
+
+  p.name {
+    margin-top: 30px;
+    margin-bottom: 3px;
+
+    font-size: 2.6rem;
+    font-weight: bold;
+    line-height: 35px;
+    text-shadow: 0px 2px 5px rgba(0,0,0,0.50);
+  }
+
+  img {
+    float: left;
+  }
+
+  p.city {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+}
+
+.artistpic {
+  width:110px;
+  height:110px;
+  padding-top:20px;
+  padding-left:10px;
+}
+
+#addmoretext {
+  font-family: 'Open Sans', sans-serif;
+  color: #9b9b9b;
+  text-align: center;
+  font-size: 20px;
+}
+
+#signupbutton {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 200px;
+  height: 50px;
+}
+
+#signupbutton .ui-btn-inner {
+  padding: 0px;
+}
+
+#signupbutton .ui-btn-text {
+  font-size: 30px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#concert-list .ui-li {
+  @include linear-gradient(#FFFFFF, #DDDDDD);
+  box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.50);
+  margin-bottom: 30px;
+}
+
+#concert-list h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 28px;
+  color: rgba(74,74,74,1);
+  margin-top: 0.3em;
+  margin-bottom: 0.2em;
+}
+
+#concert-list strong {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: rgba(155,155,155,1);
+  line-height: 21px;
+}
+
+#concert-list p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  color: rgba(155,155,155,1);
+  line-height: 17px;
+}
+
+#concert-list .ui-li-aside {
+  margin-top: 40px;
+  width: 85px;
+}
+
+#concert-list .ui-li-aside .ui-btn {
+  @include linear-gradient(#FF374A, #C70303);
+  border-radius: 10px;
+}
+
+#concert-list .ui-li-aside .ui-btn .ui-btn-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: rgba(255,255,255,1);
+  text-shadow: 0px 2px 5px rgba(0,0,0,0.50);
+}

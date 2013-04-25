@@ -1,0 +1,80 @@
+/* Styles for the header */
+#top-bar.ui-header {
+  @include radial-gradient(50% 0%, #FF374A 0%, #B60000 100%);
+  border: 1px solid #B20001;
+  box-shadow: 0px 2px 4px 0 rgba(0,0,0,0.50);
+  height: 45px;
+
+  .ui-btn {
+    border-radius: 2px;
+    border: 0px;
+    @include linear-gradient(#FF374A, #B60000);
+    box-shadow: 0px 1px 1px 0 rgba(0,0,0,0.50);
+  }
+
+  .ui-btn-text {
+    font-size: 2.0rem;
+    color: rgba(255,255,255,1);
+    line-height: 25px;
+    text-shadow: 0px 2px 5px rgba(0,0,0,0.50);
+  }
+
+  .bolt {
+    text-align: center;
+    padding-top: 3px;
+  }
+}
+
+/* Styles for the left nav bar */
+#menu {
+  display: none;
+}
+
+#jPanelMenu-menu {
+  overflow-y: auto !important;
+  background: #3b3b3b;
+  font-family: 'Open Sans', sans-serif; // have to override because of jPanel javascript
+  font-size: 1.6rem;
+
+  h2 {
+    text-decoration: none;
+    text-shadow: 0 -1px 2px #222;
+    color: #f7f7f7;
+    padding-left: 0.5em;
+    line-height: 47px;
+    margin: 0px;
+  }
+
+  ul {
+    border-bottom: 1px solid #484848;
+    list-style: none;
+    list-style-image: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    a:hover, #jPanelMenu-menu li a:focus {
+      @include linear-gradient(#484848, #383838);
+    }
+
+    a:active {
+      @include linear-gradient(#3e3e3e, #2e2e2e);
+      box-shadow: 0 2px 7px #222 inset;
+      border-top-color: #222;
+      padding-top: 0.55em;
+      padding-bottom: 0.45em;
+    }
+
+    a {
+      @include linear-gradient(#3e3e3e, #383838);
+      display: block;
+      padding: 0.5em 5%;
+      border-top: 1px solid #484848;
+      border-bottom: 1px solid #2e2e2e;
+      text-decoration: none;
+      text-shadow: 0 -1px 2px #222;
+      color: #f7f7f7;
+    }
+  }
+}

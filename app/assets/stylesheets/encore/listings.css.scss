@@ -1,0 +1,29 @@
+/* Setlists */
+
+.ui-icon-backred {
+    width:58px;
+    height: 24px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    box-shadow: none;
+    }
+
+.ui-icon-buybutton {
+    width:18px;
+    height: 18px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    box-shadow: none;
+    }
+
+.ui-icon-backred  {background-image: url('/assets/setlist/back.png');}
+.ui-icon-buybutton1 {background-image: url('/assets/setlist/buybutton1.png');}
+
+/* Listings page */
+
+#listingstitle {
+    text-align: center;
+    font-size: 30px;
+    color: #FF374A;
+    line-height: 0px;
+}
