@@ -1,8 +1,8 @@
 #profilecover {
   margin: -15px -15px 15px -15px; // stretch to entire body
-  height: 130px;
+  height: 90px;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
-  padding: 10px;
+  padding: 5px;
 
   background: url('/assets/profile/crowd.png') no-repeat center center; 
   background-size: cover;
@@ -10,28 +10,30 @@
   color: white;
 
   .profilepic {
-    @include encore-circle(120px, 3px);
+    @include encore-circle(80px, 3px);
     float: left;
     margin-right: 15px;
   }
 
-  p.name {
-    margin-top: 30px;
-    margin-bottom: 3px;
+  .profiletext {
+    p.name {
+      margin-top: 0px;
+      margin-bottom: 3px;
 
-    font-size: 2.6rem;
-    font-weight: bold;
-    line-height: 35px;
-    text-shadow: 0px 2px 5px rgba(0,0,0,0.50);
-  }
+      font-size: 2.4rem;
+      font-weight: bold;
+      line-height: 3.0rem;
+      text-shadow: 0px 2px 5px rgba(0,0,0,0.50);
+    }
 
-  img {
-    float: left;
-  }
+    img {
+      float: left;
+    }
 
-  p.city {
-    font-size: 1.4rem;
-    margin: 0;
+    p.city {
+      font-size: 1.4rem;
+      margin: 0;
+    }
   }
 }
 

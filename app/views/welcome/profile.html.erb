@@ -1,11 +1,13 @@
 <div id="profilecover">
   <div class="profilepic">
-    <%= image_tag "http://graph.facebook.com/#{current_user.uid}/picture?width=120&height=120" %>
+    <%= image_tag "http://graph.facebook.com/#{current_user.uid}/picture?width=80&height=80" %>
   </div>
 
-  <p class="name"><%= current_user.name %></p>
-  <%= image_tag "profile/locationmarker.png" %>
-  <p class="city"><%= request.location.city rescue "Toronto" %>Toronto</p>
+  <div class="profiletext">
+    <p class="name"><%= current_user.name %></p>
+    <%= image_tag "profile/locationmarker.png" %>
+    <p class="city"><%= request.location.city rescue "Toronto" %>Toronto</p>
+  </div>
 </div>
 
 <ul data-role="listview" data-inset="true" data-shadow="false" data-corners="false" id="concert-list">
