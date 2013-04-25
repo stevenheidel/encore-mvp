@@ -9,8 +9,8 @@
   <% listings.each do |listing| %>
   <li>
     <%= image_tag listing.picture.url(:thumb) %>
-    <h2>listing.title</h2>
-    <p><strong>listing.description</strong></p>
+    <h2><%= listing.title %></h2>
+    <p><strong><%= listing.description %></strong></p>
   </li>
   <% end %>
 <% end %>
