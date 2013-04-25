@@ -10,7 +10,7 @@ group :production do
   gem 'pg'
 
   # Enable asset compression and CDN serving on Heroku
-  gem 'heroku_rails_deflate'
+  # gem 'heroku_rails_deflate'
 end
 
 # Gems used only for assets and not required in production environments by default.
