@@ -15,7 +15,7 @@
 <ul data-role="listview" data-inset="true" data-shadow="false" data-corners="false" id="concert-list">
   <%= render @concerts %>
 
-  <% cache ["profile-signup-2", current_user] do %>
+  <% cache ["profile-signup", current_user] do %>
     <% if current_user.signed_up? %>
       <br />
       <p id="addmoretext">

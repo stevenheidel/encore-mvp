@@ -20,18 +20,14 @@
   </head>
   <body>
     <div data-role="page">
-      <% if current_page?(root_url) %>
+      <%= render('shared/top_bar') %>
+
+      <div data-role="content">
         <%= yield %>
-      <% else %>
-        <%= render('shared/top_bar') %>
+      </div>
 
-        <div data-role="content">
-          <%= yield %>
-        </div>
-
-        <%= render('shared/signup_popup') %>
-        <%= render('shared/info_popup') %>
-      <% end %>
+      <%= render('shared/signup_popup') %>
+      <%= render('shared/info_popup') %>
     </div>
   </body>
 </html>

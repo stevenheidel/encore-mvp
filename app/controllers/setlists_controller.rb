@@ -1,11 +1,9 @@
 class SetlistsController < InheritedResources::Base
-  before_filter :authenticate_user!
-
   belongs_to :concert
 
-  def index
-    index! do 
-      @setlists = @setlists.reorder('id')
+  protected
+    
+    def collection
+      @setlists ||= end_of_association_chain.order("id")
     end
-  end
 end

@@ -1,4 +1,4 @@
-<% cache ["v2", "top-bar"] do %>
+<% cache ["top-bar", current_user] do %>
 <div id="menu">
   <h2>Encore</h2>
   <ul>
@@ -9,9 +9,12 @@
        pages << ["Concert Listings", "/concert_listings"]
        pages << ["Deals", "/concerts/" + current + "/deals"]
        pages.each do |page| %>
-    <li><%= link_to page[0], page[1], data: {transition: "none"}, onclick: "jPM.close()" %></li>
+      <li><%= link_to page[0], page[1], data: {transition: "none"}, onclick: "jPM.close()" %></li>
     <% end %>
-    <li><%= link_to 'Sign Out', destroy_user_session_path, method: 'delete' %></li>
+
+    <% if user_signed_in? %>
+      <li><%= link_to 'Sign Out', destroy_user_session_path, method: 'delete', data: {ajax: false} %></li>
+    <% end %>
   </ul>
 </div>
 

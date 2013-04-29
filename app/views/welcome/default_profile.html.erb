@@ -1,0 +1,19 @@
+<% cache ["v1", "default-profile"] do %>
+  <div id="profilecover">
+    <div class="profilepic">
+      <%= image_tag "profile/boltprofile.png" %>
+    </div>
+
+    <div class="profiletext">
+      <p class="name">Your Name Here!</p>
+      <%= image_tag "profile/locationmarker.png" %>
+      <p class="city">Location</p>
+    </div>
+  </div>
+
+  <div id="facebooklogin">
+    <p>Customize your profile by signing in with Facebook.</p>
+    <%= link_to image_tag("login/facebook.png"), user_omniauth_authorize_path(:facebook), data: {ajax: false} %>
+    <p>(We'll never post anything to your timeline)</p>
+  </div>
+<% end %>
