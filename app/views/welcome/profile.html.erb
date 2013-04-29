@@ -14,19 +14,24 @@
 
 <ul data-role="listview" data-inset="true" data-shadow="false" data-corners="false" id="concert-list">
   <%= render @concerts %>
-</ul>
 
-<% cache ["profile-signup", current_user] do %>
-  <% if current_user.signed_up? %>
-    <p id="addmoretext">
-      Thanks for signing up!
-    </p>
-  <% else %>
-    <p id="addmoretext">
-      Add more time capsules by <br />
-      signing up for our beta
-    </p>
-
-    <a href="#popupLogin" id="signupbutton" data-rel="popup" data-position-to="window" data-role="button" data-inline="true" data-theme="a" data-transition="pop">Sign Up</a>
+  <% cache ["profile-signup-2", current_user] do %>
+    <% if current_user.signed_up? %>
+      <br />
+      <p id="addmoretext">
+        Thanks for signing up!
+      </p>  
+    <% else %>
+      <li id="signupbutton">
+        <a href="#popupLogin" data-rel="popup" data-position-to="window" data-transition="pop">
+          <%= image_tag 'profile/boltprofile.png' %>
+          <h3>Your next concert...</h3>
+          <p class="venue">Download Encore</p>
+          <p class="date">Coming July 2013</p>
+        </a>
+      </li>
+      <br />
+      <p id="addmoretext"></p>
+    <% end %>
   <% end %>
-<% end %>
+</ul>
