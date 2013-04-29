@@ -8,5 +8,5 @@ class Post < ActiveRecord::Base
 
   validates_uniqueness_of :link
 
-  scope :published, where(:published => true)
+  scope :published, where(:published => true).order("updated_at DESC")
 end
