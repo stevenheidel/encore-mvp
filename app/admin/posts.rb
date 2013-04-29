@@ -9,6 +9,8 @@ ActiveAdmin.register Post do
       concert = post.concert
       post.published = false
       post.save
+
+      sync_destroy post
     end
 
     redirect_to admin_concert_posts_path(concert)
@@ -21,6 +23,8 @@ ActiveAdmin.register Post do
       concert = post.concert
       post.published = true
       post.save
+
+      sync_new post
     end
 
     redirect_to admin_concert_posts_path(concert)
@@ -54,11 +58,23 @@ ActiveAdmin.register Post do
 
   controller do
     def create
-      create! { find_remaining_info @post }
+      create! do 
+        find_remaining_info @post 
+        sync_new @post if @post.published
+      end
     end
 
     def update
-      update! { find_remaining_info @post }
+      update! do
+        find_remaining_info @post
+        sync_update @post
+      end
+    end
+
+    def destroy
+      destroy! do
+        sync_destroy @post
+      end
     end
 
     # automatically fill in field based on link
@@ -83,12 +99,12 @@ ActiveAdmin.register Post do
         post.user_name = media.caption.from.full_name
         post.user_image_url = media.caption.from.profile_picture
       when "Twitter"
-        tweet = Twitter.status(id)
-
         Twitter.configure do |config|
           config.consumer_key = "nykMJeAV0wZxbmACRXgv9g"
           config.consumer_secret = "f5Hl9WK2LHGkS1Xokdra97pPhRTxjJuMzoap4hQC3Y"
         end
+
+        tweet = Twitter.status(id)
 
         post.text = tweet.text
 

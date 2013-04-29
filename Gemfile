@@ -68,3 +68,7 @@ gem 'geocoder'
 # for image uploads
 gem 'paperclip'
 gem 'aws-sdk'
+
+# for syncing
+gem 'pusher', :git => "git://github.com/pusher/pusher-gem.git"
+gem 'sync', :git => "git://github.com/stevenheidel/sync.git"

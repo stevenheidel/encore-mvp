@@ -7,3 +7,5 @@
 #= require encore
 
 #= require mixpanel
+
+#= require sync
