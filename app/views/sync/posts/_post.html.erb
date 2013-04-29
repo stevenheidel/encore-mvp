@@ -7,6 +7,8 @@
 
   <% if user_signed_in? %>
   <div class="heartpic <%= "on" if current_user.posts.include?(post) %>" id="<%= post.id %>"></div>
+  <% else %>
+  <div class="heartpic"></div>
   <% end %>
 
   <h3><%= post.user_name %></h3>
