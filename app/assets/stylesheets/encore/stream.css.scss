@@ -5,7 +5,7 @@
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
     padding: 5px;
 
-    @include encore-background('/assets/stream/htdaback.png');
+    @include encore-background('/assets/stream/lumineers_background.jpg');
 
     img {
       position: absolute; // needed to overlay text underneath
