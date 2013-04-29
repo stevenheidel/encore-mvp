@@ -51,11 +51,10 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 
-# for Instagram API
-gem 'instagram'
-
-# for other APIs
+# for all the APIs
 gem 'httparty'
+gem 'instagram'
+gem 'twitter'
 
 # for bulk import
 gem 'activerecord-import'

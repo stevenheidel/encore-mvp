@@ -83,7 +83,17 @@ ActiveAdmin.register Post do
         post.user_name = media.caption.from.full_name
         post.user_image_url = media.caption.from.profile_picture
       when "Twitter"
-        
+        tweet = Twitter.status(id)
+
+        Twitter.configure do |config|
+          config.consumer_key = "nykMJeAV0wZxbmACRXgv9g"
+          config.consumer_secret = "f5Hl9WK2LHGkS1Xokdra97pPhRTxjJuMzoap4hQC3Y"
+        end
+
+        post.text = tweet.text
+
+        post.user_name = tweet.user.name
+        post.user_image_url = tweet.user.profile_image_url
       when "Vine"
 
       when "Youtube"
