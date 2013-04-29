@@ -76,12 +76,12 @@
 
     .profilepic {
       position: absolute;
-      @include encore-circle(40px, 3px);
+      @include encore-circle(33px, 3px);
       margin: 3px;
 
       img {
-        width: 40px;
-        height: 40px;
+        width: 33px;
+        height: 33px;
       }
     }
 
