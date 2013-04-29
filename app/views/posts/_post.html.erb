@@ -8,6 +8,17 @@
 
   <h3><%= post.user_name %></h3>
 
-  <p><%= image_tag post.image_url %></p>
+  <% case post.network %>
+  <% when "Instagram" %>
+    <p><%= image_tag post.image_url %></p>
+  <% when "Twitter" %>
+    <p><%= post.text %></p>
+  <% when "Vine" %>
+    <p></p>
+  <% when "Youtube" %>
+    <p></p>
+  <% else %>
+    <p></p>
+  <% end %>
 </li>
 <% end %>

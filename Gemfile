@@ -54,6 +54,9 @@ gem 'omniauth-facebook'
 # for Instagram API
 gem 'instagram'
 
+# for other APIs
+gem 'httparty'
+
 # for bulk import
 gem 'activerecord-import'
 
