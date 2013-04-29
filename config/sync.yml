@@ -15,4 +15,4 @@ test:
 
 production:
   <<: *pusher
-  async: true
+  async: false
