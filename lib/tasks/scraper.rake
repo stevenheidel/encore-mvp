@@ -6,7 +6,7 @@ namespace :scraper do
     end
 
     # Find the concert
-    concert = Concert.find_by_id(ENV['current_concert'].to_i)
+    concert = Concert.find_by_id(ENV['CURRENT_CONCERT_ID'].to_i)
 
     # Set up Instagram
     Instagram.configure do |config|
