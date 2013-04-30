@@ -6,3 +6,10 @@
   <%= sync partial: 'post', collection: @concert.posts.published %>
 </ul>
 <% end %>
+
+<script type="application/json" id="posts-data">
+  {
+    "logged_in": <%= user_signed_in? %>,
+    "hearts": <%= @hearts %>
+  }
+</script>

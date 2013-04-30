@@ -10,7 +10,6 @@ class UsersController < ApplicationController
   def favourite
     post = Post.find_by_id(params[:id])
     current_user.toggle_favourite(post)
-    post.touch # update cache
 
     render :nothing => true
   end

@@ -1,13 +1,11 @@
-<%# cache [post, current_user] do %>
+<% cache post do %>
 <%# classes have to be added manually here because Sync doesn't add them %>
 <li class="ui-li ui-li-static ui-btn-up-c">
   <div class="profilepic">
     <%= image_tag post.user_image_url %>
   </div>
 
-  <% if user_signed_in? %>
-  <div class="heartpic <%= "on" if current_user.posts.include?(post) %>" id="<%= post.id %>"></div>
-  <% end %>
+  <div class="heartless" id="<%= post.id %>"></div>
 
   <h3><%= post.user_name %></h3>
 
@@ -24,4 +22,4 @@
     <p></p>
   <% end %>
 </li>
-<%# end %>
+<% end %>
