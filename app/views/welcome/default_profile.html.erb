@@ -17,7 +17,7 @@
 </ul>
 
 <div id="facebooklogin">
-  <p>Want to customize your profile and save your favourite content?</p>
+  <p>Want to customize your profile and <%= image_tag 'stream/heart-on.png' %> your favourite content?</p>
   <%= link_to image_tag("login/facebook.png"), user_omniauth_authorize_path(:facebook), data: {ajax: false} %>
   <p><small>(We'll never post anything to your timeline)</small></p>
 </div>

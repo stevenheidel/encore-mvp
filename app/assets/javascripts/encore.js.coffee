@@ -1,10 +1,6 @@
-# Must be outside to reference everywhere
-jPM = undefined
-
-# Equivalent to jQuery 
-$(document).bind "pageinit", ->
-  
-  # Turn on jPqanel Menu and fix for Android
+# Turn on jPanel menu
+@load_jpanel = ->
+  # Fix for Android
   jPM = jPM or $.jPanelMenu(
     beforeOpen: ->
       $("#menu-trigger").removeClass "menu-trigger"
@@ -16,8 +12,13 @@ $(document).bind "pageinit", ->
   )
   jPM.off()
   jPM.on()
+
+  # Close menu on menu links
+  $("#jPanelMenu-menu a").click ->
+    jPM.close()
   
-  # Heart pics on stream page
+# Heart pics on stream page
+@load_hearts = ->
   # Get JSON Data
   posts_data = $.parseJSON $("#posts-data").html() if $("#posts-data").html()
   if posts_data?.logged_in
@@ -32,6 +33,7 @@ $(document).bind "pageinit", ->
       mixpanel.track "Favourited a post", {"post_id": event.target.id}
     false
   
+@load_signup_form = ->
   # Sign-up popup code
   $("#signupForm").submit ->
     $.post "/signup", $("#signupForm").serialize(), ->

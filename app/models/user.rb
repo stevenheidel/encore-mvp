@@ -46,4 +46,13 @@ class User < ActiveRecord::Base
       end
     end
   end
+
+  def just_registered?
+    if (self.current_sign_in_at - self.updated_at).abs < 1 # essentially means equal, just created
+      self.touch
+      return true
+    end
+
+    return false
+  end
 end

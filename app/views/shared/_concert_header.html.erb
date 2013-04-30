@@ -5,7 +5,7 @@
   </div>
   <div class="concertinfo">
     <p>
-      <%= @concert.venue %>  |  <%= @concert.date.strftime("%B %d, %Y") %>
+      <%= @concert.venue %>, <%= @concert.date.strftime("%B %d %Y") %>
       
       <% if back_button %>
       <a href="<%= parent_url %>" data-role="button" data-inline="true" data-theme="reset2" class="ios app-theme-none notext backred"></a>

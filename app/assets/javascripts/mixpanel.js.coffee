@@ -1,4 +1,4 @@
-$(document).bind "pageinit", ->
+@load_mixpanel = ->
   
   mixpanel.track_links "#facebooklogin a", "Clicked 'Log in with Facebook'"
 

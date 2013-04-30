@@ -27,16 +27,19 @@
       mixpanel.init("ca46f5eba468afd46551f7c9ced4fb6c");
       <% end %>
 
-      mixpanel.identify("<%= request.session_options[:id] %>");
-
       <% if user_signed_in? %>
+        <% if current_user.just_registered? %>
+        mixpanel.alias("<%= current_user.email %>");
+        <% end %>
+      
+      mixpanel.identify("<%= current_user.email %>");
+      mixpanel.name_tag("<%= current_user.name %>");
+
       mixpanel.people.set({
         $email: "<%= current_user.email %>",
         $name:  "<%= current_user.name %>",
         $created: "<%= current_user.created_at %>"
       });
-
-      mixpanel.name_tag("<%= current_user.name %>");
       <% end %>
     </script>
     <!-- End Mixpanel -->
