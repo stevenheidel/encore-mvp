@@ -1,0 +1,76 @@
+/* DEFAULTS */
+
+/* Needed to use root ems */
+html {
+  font-size: 62.5%; // see http://snook.ca/archives/html_and_css/font-size-with-rem
+}
+
+body {
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 1.8rem;
+}
+
+/* MIXINS */
+
+/* Used to create a div for making a white border around image */
+@mixin encore-circle($width, $border-width) {
+  width: $width;
+  height: $width;
+  border: solid $border-width white;
+
+  -moz-border-radius: #{$width/2}/#{$width/2};
+  -webkit-border-radius: #{$width/2} #{$width/2};
+  border-radius: #{$width/2}/#{$width/2};
+
+  overflow: hidden;
+}
+
+@mixin encore-background($url) {
+  background: url($url) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* BUTTONS RESET */
+
+a[data-role="button"][data-theme="reset"] {
+  border-radius: 0px; 
+  -webkit-border-radius: 0px; 
+  -moz-border-radius: 0px;
+
+  box-shadow: none !important; 
+  -webkit-box-shadow: none !important; 
+  -moz-box-shadow: none !important;
+  
+  text-decoration: none;
+}
+
+a[data-role="button"][data-theme="reset"] .ui-btn-inner {
+  color: white;
+  overflow: visible;
+  text-shadow: 0 -1px 0 #000;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+
+  border: 1px solid #333;
+  border-radius: 5px; 
+  -webkit-border-radius: 5px; 
+  -moz-border-radius: 5px;
+
+  background: #333;
+
+  box-shadow: 0 1px 0 rgba(255,255,255, 0.25), inset 0 1px 1px rgba(0,0,0, 0.2);
+  -webkit-box-shadow: 0 1px 0 rgba(255,255,255, 0.25), inset 0 1px 1px rgba(0,0,0, 0.2);
+  -moz-box-shadow: 0 1px 0 rgba(255,255,255, 0.25), inset 0 1px 1px rgba(0,0,0, 0.2);
+}
+
+/* no-background */
+a[data-role="button"][data-theme="reset"].app-theme-none .ui-btn-inner {
+  color: #222;
+  background-color: rgba(0,0,0,0) !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}

@@ -4,11 +4,10 @@
 #= require jquery.mobile
 #= require jquery.jpanelmenu
 
-#= require encore
-
-#= require mixpanel
-
 #= require sync
+
+#= require encore/encore
+#= require encore/mixpanel
 
 # Equivalent to jQuery document.ready
 $(document).bind "pageinit", ->
