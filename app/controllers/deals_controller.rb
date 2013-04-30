@@ -1,4 +1,6 @@
 class DealsController < InheritedResources::Base
+  belongs_to :concert
+  
   def index
     index! do
       @deal_categories = @deals.group_by {|d| d.category}
