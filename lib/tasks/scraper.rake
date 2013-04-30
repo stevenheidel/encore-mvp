@@ -21,15 +21,22 @@ namespace :scraper do
       location_likelihood = string_similarity(location.name, concert.venue)
       if location_likelihood > 0.25
         Instagram.location_recent_media(location.id).each do |media|
-          caption_likelihood = string_similarity(media.caption.text, concert.title)
-          images << {
+          if media.caption
+            caption_likelihood = string_similarity(media.caption.text, concert.title)
+          else
+            caption_likelihood = 0.25
+          end
+
+          image = {
             :link => media.link, 
             :image_url => media.images.low_resolution.url, 
-            :text => media.caption.text,
             :score => ((location_likelihood * caption_likelihood) * 1000).to_i,
-            :user_name => media.caption.from.full_name,
-            :user_image_url => media.caption.from.profile_picture
+            :user_name => media.user.full_name,
+            :user_image_url => media.user.profile_picture
           }
+          image[:text] = media.caption.text if media.caption
+
+          images << image
         end
       end
     end
@@ -73,5 +80,11 @@ def string_similarity(str1, str2)
       end 
     end 
   end 
-  (2.0 * intersection) / union
+  score = (2.0 * intersection) / union
+
+  puts "Input: #{str1}"
+  puts "Other: #{str2}"
+  puts "Score: #{score}"
+
+  score
 end

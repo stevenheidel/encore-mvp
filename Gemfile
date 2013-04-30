@@ -4,6 +4,8 @@ gem 'rails', '3.2.13'
 
 group :development do
   gem 'sqlite3'
+
+  gem 'debugger'
 end
 
 group :production do
@@ -39,9 +41,6 @@ end
 
 # Use unicorn as the app server
 gem 'unicorn'
-
-# To use debugger
-# gem 'debugger'
 
 # Active Admin
 gem 'inherited_resources'
