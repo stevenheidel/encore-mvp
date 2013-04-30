@@ -30,7 +30,9 @@ ActiveAdmin.register Post do
     redirect_to admin_concert_posts_path(concert)
   end
 
-  config.filters = false
+  filter :filter_score
+  filter :published
+  filter :network, :as => :select, :collection => ["Instagram"]
 
   index do
     selectable_column
