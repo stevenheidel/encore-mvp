@@ -29,5 +29,10 @@
       setlist_name: $(this).children("h2").text()
     }
 
+  $("#concertlistings-list a").click ->
+    mixpanel.track "Clicked on a concert list", {
+      setlist_name: $(this).children("h2").text()
+    }
+
   $("#infobutton").click ->
     mixpanel.track "Clicked the info button"

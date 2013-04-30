@@ -1,15 +1,23 @@
 <% cache @listings do %>
-<ul data-role="listview" data-inset="true" data-theme="d" data-divider-theme="d" data-corners="false">
+<ul id="#concertlistings-list" data-role="listview" data-inset="true" data-theme="d" data-divider-theme="d" data-corners="false">
 <% @listing_dates.each do |date, listings| %>
   <li data-role="list-divider"><%= date.strftime("%B %d, %Y") %></li>
 
   <% listings.each do |listing| %>
-  <li>
-    <%= image_tag listing.picture.url(:thumb) %>
-    <h2><%= listing.title %></h2>
-    <p><strong><%= listing.description %></strong></p>
+  <li data-icon="buybutton1">
+    <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">
+      <%= image_tag listing.picture.url(:thumb) %>
+      <h2><%= listing.title %></h2>
+      <p><strong><%= listing.description %></strong></p>
+    </a>
   </li>
   <% end %>
 <% end %>
 </ul>
+
+<div data-role="popup" id="purchase" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+  <h3>Sorry!</h3>
+  <p>Unfortunately we can't process this deal right now. </p>
+  <a href="index.html" data-role="button" data-rel="back" data-theme="b" data-icon="delete" data-inline="true" data-mini="true"> Close </a>
+</div>
 <% end %>
