@@ -1,13 +1,33 @@
 @load_mixpanel = ->
   
-  mixpanel.track_links "#facebooklogin a", "Clicked 'Log in with Facebook'"
+  $("#facebooklogin a").click ->
+    mixpanel.track "Clicked 'Log in with Facebook'"
 
-  mixpanel.track_links "#concertheader .setlist", "Clicked 'Setlist'"
+  $("#concertheader .setlist").click ->
+    mixpanel.track "Clicked 'Setlist'"
 
-  mixpanel.track_links "#concertheader .backred", "Clicked 'Back' from Setlist"
+  $("#concertheader .backred").click ->
+    mixpanel.track "Clicked 'Back' from Setlist"
 
-  mixpanel.track_links "#jPanelMenu-menu a", "Clicked menu link", (ele) ->
-    {link: $(ele).text()}
+  $("#jPanelMenu-menu a").click ->
+    mixpanel.track "Clicked menu link", {
+      link: $(this).text()
+    }
 
-  mixpanel.track_links "#concert-list a", "Viewed concert from profile", (ele) ->
-    {concert_name: $(ele).children("h3").text()}
+  $("#concert-list a").click ->
+    mixpanel.track "Viewed concert from profile", {
+        concert_name: $(this).children("h3").text()
+    }
+
+  $("#deal-list a").click ->
+    mixpanel.track "Clicked on a deal", {
+      deal_name: $(this).children("h2").text()
+    }
+
+  $("#setlist-list a").click ->
+    mixpanel.track "Clicked on a setlist", {
+      setlist_name: $(this).children("h2").text()
+    }
+
+  $("#infobutton").click ->
+    mixpanel.track "Clicked the info button"

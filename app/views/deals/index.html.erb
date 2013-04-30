@@ -1,15 +1,14 @@
 <% cache @deal_categories do %>
-<ul data-role="listview" data-split-icon="buybutton1" data-split-theme="d" data-inset="true" data-divider-theme="d" data-corners="false">
+<ul id="deal-list" data-role="listview" data-inset="true" data-divider-theme="d" data-corners="false">
 <% @deal_categories.each do |category, deals| %>
   <li data-role="list-divider"> <%= category %> </li>
   <% deals.each do |deal| %>
-  <li>
+  <li data-icon="buybutton1">
     <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">
       <%= image_tag deal.picture.url(:thumb) %>
       <h2><%= deal.title %></h2>
       <p><b><%= number_to_currency deal.price %></b> <%= deal.description %></p>
     </a>
-    <a href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop"></a>
   </li>
   <% end %>
 <% end %>

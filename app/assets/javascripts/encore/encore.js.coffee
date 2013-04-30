@@ -30,6 +30,7 @@
   $(".heartpic").click (event) ->
     $.post "/favourite/" + event.target.id, ->
       $("#" + event.target.id).toggleClass "on"
+      
       mixpanel.track "Favourited a post", {"post_id": event.target.id}
     false
   
@@ -40,4 +41,6 @@
       $("#popupLogin").popup "close"
       $("#addmoretext").text "Thanks for signing up!"
       $("#signupbutton").hide()
+      
+      mixpanel.track("Signed up for beta")
     false
