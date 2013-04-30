@@ -14,3 +14,7 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+
+# Ignore local assets before they're uploaded via asset_sync
+public/assets/*
+!public/assets/manifest.yml

@@ -27,6 +27,7 @@ group :assets do
 
   # Sync assets to CDN
   gem 'asset_sync'
+  gem 'turbo-sprockets-rails3'
 
   # Javascript asset libraries
   gem 'jquery-rails'
