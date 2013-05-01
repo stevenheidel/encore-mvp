@@ -124,7 +124,10 @@ ActiveAdmin.setup do |config|
   # Active Admin resources and pages from here.
   #
   config.before_filter do
-    newrelic_ignore if Rails.env.production?
+    if Rails.env.production?
+      require 'new_relic/agent/instrumentation/controller_instrumentation'
+      newrelic_ignore
+    end
   end
 
 
