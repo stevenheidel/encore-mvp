@@ -123,12 +123,7 @@ ActiveAdmin.setup do |config|
   # You can add before, after and around filters to all of your
   # Active Admin resources and pages from here.
   #
-  config.before_filter do
-    if Rails.env.production?
-      require 'new_relic/agent/instrumentation/controller_instrumentation'
-      newrelic_ignore
-    end
-  end
+  # config.before_filter :do_something_awesome
 
 
   # == Register Stylesheets & Javascripts
