@@ -1,4 +1,4 @@
-<% cache ["profile-signup", current_user] do %>
+<%# cache ["profile-signup", current_user, session[:current_user_signed_up]] do %>
   <% if session[:current_user_signed_up] || (user_signed_in? && current_user.signed_up?) %>
     <br />
     <p id="addmoretext">
