@@ -1,0 +1,19 @@
+<% cache ["profile-signup", current_user] do %>
+  <% if session[:current_user_signed_up] || (user_signed_in? && current_user.signed_up?) %>
+    <br />
+    <p id="addmoretext">
+      Thanks for signing up!
+    </p>  
+  <% else %>
+    <li id="signupbutton">
+      <a href="#popupLogin" data-rel="popup" data-position-to="window" data-transition="pop">
+        <%= image_tag 'profile/boltprofile.png' %>
+        <h3>Your next concert...</h3>
+        <p class="venue">Download Encore for iPhone and Android</p>
+        <p class="date">Coming June 2013</p>
+      </a>
+    </li>
+    <br />
+    <p id="addmoretext"></p>
+  <% end %>
+<% end %>

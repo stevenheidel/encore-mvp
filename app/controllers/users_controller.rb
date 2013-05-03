@@ -1,8 +1,15 @@
 class UsersController < ApplicationController
   def signup
-    current_user.provided_email = params[:email]
-    current_user.provided_phone = params[:phone]
-    current_user.save
+    user = current_user || User.create(
+      :name => "Anonymous",
+      :email => ('a'..'z').to_a.shuffle[0,9].join # email is unique so just make a random one
+    )
+
+    user.provided_email = params[:email]
+    user.provided_phone = params[:phone]
+    user.save
+
+    session[:current_user_signed_up] = true
     
     render :nothing => true
   end
