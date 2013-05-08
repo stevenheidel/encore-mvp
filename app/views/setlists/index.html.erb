@@ -4,7 +4,8 @@
 
 <ul id="setlist-list" data-role="listview" data-inset="true" data-corners="false">
   <% @setlists.each.with_index(1) do |setlist, index| %>
-  <li data-icon="buybutton1">
+  <!-- <li data-icon="buybutton1"> -->
+  <li data-role="button">
     <a href="<%= setlist.itunes %>" target="_blank">
       <%= image_tag setlist.picture.url(:thumb) %>
       <h2><%= index %>. <%= setlist.song %></h2>
