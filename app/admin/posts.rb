@@ -104,6 +104,8 @@ ActiveAdmin.register Post do
         Twitter.configure do |config|
           config.consumer_key = "nykMJeAV0wZxbmACRXgv9g"
           config.consumer_secret = "f5Hl9WK2LHGkS1Xokdra97pPhRTxjJuMzoap4hQC3Y"
+          config.oauth_token = "23519284-EURqOaxJ7JYUg49w5aPmnjTJp661drTMAATLNIEjU"
+          config.oauth_token_secret = "IjxPf1fgdes8ZZBwSObwhffiSDD3jAuSBrSSRyLzMs"
         end
 
         tweet = Twitter.status(id)
@@ -115,7 +117,9 @@ ActiveAdmin.register Post do
       when "Vine"
 
       when "Youtube"
+        post.text = id
 
+        post.user_name = "Youtube Video"
       end
 
       post.save

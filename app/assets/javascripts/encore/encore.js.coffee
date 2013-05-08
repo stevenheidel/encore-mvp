@@ -4,6 +4,7 @@
   jPM = jPM or $.jPanelMenu(
     beforeOpen: ->
       $("#menu-trigger").removeClass "menu-trigger"
+      $('.ui-popup').popup('close') # close all popups so they don't reappear again
 
     afterClose: ->
       $("#menu-trigger").addClass "menu-trigger"
@@ -21,17 +22,20 @@
 @load_hearts = ->
   # Get JSON Data
   posts_data = $.parseJSON $("#posts-data").html() if $("#posts-data").html()
-  if posts_data?.logged_in
-    $(".heartless").each (i, obj) ->
-      $(obj).addClass("heartpic") # enable hearts if logged in
-      $(obj).addClass("on") if parseInt($(obj).attr('id')) in posts_data.hearts # selected ones
+  
+  $(".heartless").each (i, obj) ->
+    $(obj).addClass("heartpic") # enable hearts if logged in
+    $(obj).addClass("on") if parseInt($(obj).attr('id')) in posts_data.hearts # selected ones
 
   # add post click event
   $(".heartpic").click (event) ->
-    $("#" + event.target.id).toggleClass "on"
-    mixpanel.track "Favourited a post", {"post_id": event.target.id}
+    if posts_data?.logged_in
+      $("#" + event.target.id).toggleClass "on"
+      mixpanel.track "Favourited a post", {"post_id": event.target.id}
 
-    $.post "/favourite/" + event.target.id
+      $.post "/favourite/" + event.target.id
+    else
+      $("#facebookPopup").popup("open")
 
     false
   
@@ -39,7 +43,7 @@
   # Sign-up popup code
   $("#signupForm").submit ->
     $.post "/signup", $("#signupForm").serialize(), ->
-      $("#popupLogin").popup "close"
+      $("#popupLogin").popup("close")
       $("#addmoretext").text "Thanks for signing up!"
       $("#signupbutton").hide()
       
