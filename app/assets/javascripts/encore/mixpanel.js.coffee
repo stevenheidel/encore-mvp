@@ -36,3 +36,7 @@
 
   $("#infobutton").click ->
     mixpanel.track "Clicked the info button"
+
+  # only on the homepage, not on the live stream page
+  if $.mobile.path.parseUrl($.mobile.urlHistory.getActive().url).pathname == '/'
+    mixpanel.track "Viewed Home Page"
