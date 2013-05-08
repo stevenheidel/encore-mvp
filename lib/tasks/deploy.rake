@@ -8,4 +8,5 @@ task :deploy do
   `bundle exec rake assets:clean`
 
   `git checkout public/assets/manifest.yml`
+  `git reset --hard HEAD~1`
 end
