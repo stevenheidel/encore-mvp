@@ -15,23 +15,5 @@
 <ul data-role="listview" data-inset="true" data-shadow="false" data-corners="false" id="concert-list">
   <%= render @concerts %>
 
-  <% cache ["profile-signup", current_user] do %>
-    <% if current_user.signed_up? %>
-      <br />
-      <p id="addmoretext">
-        Thanks for signing up!
-      </p>  
-    <% else %>
-      <li id="signupbutton">
-        <a href="#popupLogin" data-rel="popup" data-position-to="window" data-transition="pop">
-          <%= image_tag 'profile/boltprofile.png' %>
-          <h3>Your next concert...</h3>
-          <p class="venue">Download Encore for iPhone and Android</p>
-          <p class="date">Coming June 2013</p>
-        </a>
-      </li>
-      <br />
-      <p id="addmoretext"></p>
-    <% end %>
-  <% end %>
+  <%= render :partial => "shared/profile_signup" %>
 </ul>

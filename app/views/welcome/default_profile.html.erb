@@ -14,6 +14,8 @@
 
 <ul data-role="listview" data-inset="true" data-shadow="false" data-corners="false" id="concert-list">
   <%= render Concert.find_by_id(ENV['CURRENT_CONCERT_ID']) %>
+
+  <%= render :partial => "shared/profile_signup" %>
 </ul>
 
 <div id="facebooklogin">

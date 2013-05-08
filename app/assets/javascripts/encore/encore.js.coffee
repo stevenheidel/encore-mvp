@@ -28,10 +28,11 @@
 
   # add post click event
   $(".heartpic").click (event) ->
-    $.post "/favourite/" + event.target.id, ->
-      $("#" + event.target.id).toggleClass "on"
-      
-      mixpanel.track "Favourited a post", {"post_id": event.target.id}
+    $("#" + event.target.id).toggleClass "on"
+    mixpanel.track "Favourited a post", {"post_id": event.target.id}
+
+    $.post "/favourite/" + event.target.id
+
     false
   
 @load_signup_form = ->
