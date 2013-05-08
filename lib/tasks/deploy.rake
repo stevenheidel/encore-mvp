@@ -6,5 +6,7 @@ task :deploy do
   `git push heroku +master`
 
   `git reset --soft HEAD~1`
-  `git reset HEAD -f public/assets/manifest.yml`
+  `git reset HEAD public/assets/manifest.yml`
+
+  `bundle exec rake assets:clean`
 end
