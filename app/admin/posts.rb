@@ -115,7 +115,9 @@ ActiveAdmin.register Post do
       when "Vine"
 
       when "Youtube"
+        post.text = id
 
+        post.user_name = "Youtube Video"
       end
 
       post.save
