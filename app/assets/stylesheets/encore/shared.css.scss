@@ -31,6 +31,8 @@
   }
 }
 
+// hack to remove weird white space on the right
+// see https://gist.github.com/geekdevs/5433246 for more comprehensive solution
 .ui-panel {
     width: 20em;
 }
