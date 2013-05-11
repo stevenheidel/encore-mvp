@@ -1,7 +1,14 @@
-/* Setlists */
+.encore-listings {
+  h2, p {
+    white-space: normal;
+  }
 
-#setlist-list a h2 {
-  white-space: normal;
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
 }
 
 .ui-icon-backred {
@@ -20,18 +27,4 @@
   border: none;
   box-shadow: none;
   background-image: url('/assets/setlist/buybutton1.png');
-}
-
-/* Listings page */
-
-#listingstitle {
-  text-align: center;
-  font-size: 30px;
-  color: #FF374A;
-  line-height: 0px;
-}
-
-/* Deals page */
-#deal-list a h2 {
-  white-space: normal;
 }

@@ -2,7 +2,7 @@
 
 <%= render :partial => "shared/concert_header", :locals => {:back_button => true} %>
 
-<ul id="setlist-list" data-role="listview" data-inset="true" data-corners="false">
+<ul id="setlist-list" class="encore-listings" data-role="listview" data-inset="true" data-corners="false">
   <% @setlists.each.with_index(1) do |setlist, index| %>
   <li data-icon="buybutton">
     <a href="<%= setlist.itunes %>" target="_blank">
