@@ -90,8 +90,8 @@ ActiveAdmin.register Post do
         post.text = media.caption.text if media.caption
         post.image_url = media.images.low_resolution.url
 
-        post.user_name = media.caption.from.full_name
-        post.user_image_url = media.caption.from.profile_picture
+        post.user_name = media.user.full_name
+        post.user_image_url = media.user.profile_picture
       when "Twitter"
         Twitter.configure do |config|
           config.consumer_key = "nykMJeAV0wZxbmACRXgv9g"
