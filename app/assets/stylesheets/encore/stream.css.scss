@@ -9,7 +9,7 @@
     display: table;
     width: 100%;
 
-    @include encore-background('/assets/stream/lumineers_background.jpg');
+    @include encore-background('/assets/stream/backgroundfoals.png');
 
     img {
       position: absolute; // needed to overlay text underneath

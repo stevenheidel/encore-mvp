@@ -1,7 +1,9 @@
 # stolen and modified from https://gist.github.com/kamranzafar/3136584
 `
   var toast=function(msg){
-    $("<div class='ui-loader ui-overlay-shadow ui-body-e ui-corner-all'><h3 style='margin:0'>"+msg+"</h3></div>")
+    $("#toast").remove();
+
+    $("<div id='toast' class='ui-loader ui-overlay-shadow ui-body-e ui-corner-all'><h3 style='margin:0'>"+msg+"</h3></div>")
     .css({ display: "block", 
       opacity: 0.90, 
       position: "fixed",
@@ -11,6 +13,9 @@
       width: "284px",
       top: "50px" })
     .appendTo( $.mobile.pageContainer ).delay( 1500 )
+    .fadeOut( 40000, function(){
+      $(this).remove();
+    })
     .on("click", function() {
       $(this).remove();
       $.mobile.changePage(window.location.href,{
@@ -25,6 +30,9 @@
   posts_data = $.parseJSON $("#posts-data").html() if $("#posts-data").html()
   concert_id = posts_data?.concert_id
 
+  num_posts = 0
+
   channel = pusher.subscribe("channel_concert_" + concert_id)
   channel.bind "new_post", (data) ->
-    toast "Click to view new posts"
+    num_posts += 1
+    toast "Click to view " + num_posts + " new posts"
