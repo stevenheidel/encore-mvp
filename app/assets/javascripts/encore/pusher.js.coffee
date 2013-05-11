@@ -13,9 +13,6 @@
       width: "284px",
       top: "50px" })
     .appendTo( $.mobile.pageContainer ).delay( 1500 )
-    .fadeOut( 40000, function(){
-      $(this).remove();
-    })
     .on("click", function() {
       $(this).remove();
       $.mobile.changePage(window.location.href,{
@@ -31,6 +28,7 @@
   concert_id = posts_data?.concert_id
 
   num_posts = 0
+  $("#toast").remove();
 
   channel = pusher.subscribe("channel_concert_" + concert_id)
   channel.bind "new_post", (data) ->
