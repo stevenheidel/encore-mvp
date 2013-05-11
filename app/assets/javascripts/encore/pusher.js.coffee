@@ -25,7 +25,6 @@
   posts_data = $.parseJSON $("#posts-data").html() if $("#posts-data").html()
   concert_id = posts_data.concert_id
 
-  pusher = new Pusher("62a80c546285dbce1636")
   channel = pusher.subscribe("channel_concert_" + concert_id)
   channel.bind "new_post", (data) ->
     toast "Click to view new posts"

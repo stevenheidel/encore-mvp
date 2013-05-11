@@ -22,9 +22,7 @@ ActiveAdmin.register Post do
       post.published = true
       post.save
 
-      Pusher['channel_concert_' + concert.id.to_s].trigger('new_post', {
-        :greeting => "Hello there!"
-      })
+      Pusher['channel_concert_' + concert.id.to_s].trigger('new_post', {})
     end
 
     redirect_to admin_concert_posts_path(concert)
@@ -61,7 +59,9 @@ ActiveAdmin.register Post do
   controller do
     def create
       create! do 
-        find_remaining_info @post 
+        find_remaining_info @post
+
+        Pusher['channel_concert_' + @post.concert.id.to_s].trigger('new_post', {}) if @post.published
       end
     end
 
