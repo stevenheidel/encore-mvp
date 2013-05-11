@@ -34,7 +34,14 @@ EncoreMvp::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
-
-  # Set the current concert ID (remember to make it a string)
-  ENV["CURRENT_CONCERT_ID"] = "1"
 end
+
+# Set the current concert ID (remember to make it a string)
+ENV["CURRENT_CONCERT_ID"] = "1"
+
+# Set up Pusher
+require 'pusher'
+
+Pusher.app_id = '43769'
+Pusher.key    = '62a80c546285dbce1636'
+Pusher.secret = '0666daa32579c68a7199'

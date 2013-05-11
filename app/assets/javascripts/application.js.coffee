@@ -4,10 +4,9 @@
 #= require jquery.mobile
 #= require jquery.jpanelmenu
 
-#= require sync
-
 #= require encore/encore
 #= require encore/mixpanel
+#= require encore/pusher
 
 # Equivalent to jQuery document.ready
 $(document).bind "pageinit", ->
@@ -17,3 +16,5 @@ $(document).bind "pageinit", ->
   load_signup_form()
 
   load_mixpanel()
+
+  load_pusher_posts()

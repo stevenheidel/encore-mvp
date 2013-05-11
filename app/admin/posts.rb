@@ -9,8 +9,6 @@ ActiveAdmin.register Post do
       concert = post.concert
       post.published = false
       post.save
-
-      sync_destroy post
     end
 
     redirect_to admin_concert_posts_path(concert)
@@ -24,7 +22,9 @@ ActiveAdmin.register Post do
       post.published = true
       post.save
 
-      sync_new post
+      Pusher['channel_concert_' + concert.id.to_s].trigger('new_post', {
+        :greeting => "Hello there!"
+      })
     end
 
     redirect_to admin_concert_posts_path(concert)
@@ -62,20 +62,12 @@ ActiveAdmin.register Post do
     def create
       create! do 
         find_remaining_info @post 
-        sync_new @post if @post.published
       end
     end
 
     def update
       update! do
         find_remaining_info @post
-        sync_update @post
-      end
-    end
-
-    def destroy
-      destroy! do
-        sync_destroy @post
       end
     end
 

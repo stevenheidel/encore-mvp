@@ -2,13 +2,13 @@
 <%= render :partial => "shared/concert_header", :locals => {:back_button => false} %>
 
 <ul data-role="listview" data-inset="true" data-shadow="false" data-corners="false" id="concert-stream">
-  <%= sync_new partial: 'post', resource: Post.new %>
-  <%= sync partial: 'post', collection: @concert.posts.published %>
+  <%= render @concert.posts.published %>
 </ul>
 <% end %>
 
 <script type="application/json" id="posts-data">
   {
+    "concert_id": <%= @concert.id %>,
     "logged_in": <%= user_signed_in? %>,
     "hearts": <%= @hearts %>
   }
