@@ -87,7 +87,7 @@ ActiveAdmin.register Post do
 
         media = Instagram.media_item(Instagram.oembed(post.link).media_id)
 
-        post.text = media.caption.text
+        post.text = media.caption.text if media.caption
         post.image_url = media.images.low_resolution.url
 
         post.user_name = media.caption.from.full_name
