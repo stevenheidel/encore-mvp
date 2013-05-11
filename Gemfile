@@ -33,7 +33,6 @@ group :assets do
 
   # Javascript asset libraries
   gem 'jquery-rails'
-  gem 'jquery_mobile_rails'
 
   # for SCSS mixins
   gem 'bourbon'

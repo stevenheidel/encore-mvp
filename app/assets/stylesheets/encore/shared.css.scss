@@ -31,13 +31,15 @@
   }
 }
 
-/* Styles for the left nav bar */
-#menu {
-  display: none;
+.ui-panel {
+    width: 20em;
 }
 
-#jPanelMenu-menu {
-  overflow-y: auto !important;
+.ui-panel-inner {
+  padding: 0;
+}
+
+#menu {
   background: #3b3b3b;
   font-size: 1.6rem;
 
@@ -59,7 +61,7 @@
   }
 
   li {
-    a:hover, #jPanelMenu-menu li a:focus {
+    a:hover, a:focus {
       @include linear-gradient(#484848, #383838);
     }
 

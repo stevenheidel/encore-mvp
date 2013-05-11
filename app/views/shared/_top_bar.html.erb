@@ -1,24 +1,5 @@
 <% cache ["top-bar", current_user] do %>
-<div id="menu">
-  <h2>Encore</h2>
-  <ul>
-    <% current = ENV["CURRENT_CONCERT_ID"]
-       pages = []
-       pages << ["Profile", "/profile"]
-       pages << ["Live Stream", concert_path(current)]
-       pages << ["Concert Listings", "/concert_listings"]
-       pages << ["Deals", "/concerts/" + current + "/deals"]
-       pages.each do |page| %>
-      <li><%= link_to page[0], page[1] %></li>
-    <% end %>
-
-    <% if user_signed_in? %>
-      <li><%= link_to 'Sign Out', destroy_user_session_path, method: 'delete', data: {ajax: false} %></li>
-    <% end %>
-  </ul>
-</div>
-
-<div data-role="header" id="top-bar">
+<div data-role="header" id="top-bar" data-position="fixed">
   <a href="#menu" id="menu-trigger" data-role="button" data-theme="reset" class="menu-trigger app-theme-none options"></a>
   <div class="bolt"><%= image_tag "shared/bolt.png" %></div>
   <a href="#infoPopup" id="heart-button" data-role="button" data-rel="popup" data-position-to="window" data-theme="reset" data-transition="pop" class="app-theme-none info"></a>

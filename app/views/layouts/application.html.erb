@@ -9,14 +9,20 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="apple-touch-fullscreen" content="yes" />
 
-    <%= stylesheet_link_tag "application", :media => "all" %>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    
+    <%= stylesheet_link_tag "application", :media => "all" %>
 
-    <%= javascript_include_tag "application" %>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+
     <script src="http://js.pusher.com/2.0/pusher.min.js" type="text/javascript"></script>
     <script>
       pusher = new Pusher("<%= Pusher.key %>");
     </script>
+
+    <%= javascript_include_tag "application" %>
 
     <!-- Mixpanel --> 
     <script>
@@ -63,6 +69,7 @@
   </head>
   <body>
     <div data-role="page">
+      <%= render('shared/panel') %>
       <%= render('shared/top_bar') %>
 
       <div data-role="content">
