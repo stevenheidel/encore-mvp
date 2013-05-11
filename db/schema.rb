@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130423024628) do
+ActiveRecord::Schema.define(:version => 20130511020304) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -66,14 +66,18 @@ ActiveRecord::Schema.define(:version => 20130423024628) do
     t.string   "facebook_page"
     t.string   "twitter"
     t.string   "instagram"
-    t.datetime "created_at",           :null => false
-    t.datetime "updated_at",           :null => false
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
     t.decimal  "venue_lat"
     t.decimal  "venue_long"
     t.string   "picture_file_name"
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
+    t.string   "background_file_name"
+    t.string   "background_content_type"
+    t.integer  "background_file_size"
+    t.datetime "background_updated_at"
   end
 
   create_table "concerts_users", :id => false, :force => true do |t|

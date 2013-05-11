@@ -1,9 +1,13 @@
 #concertheader {
+  margin: -15px -5px 15px -15px;
+
   .concertcover {
-    margin: -15px -15px 15px -15px;
     height: 80px;
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
     padding: 5px;
+
+    display: table;
+    width: 100%;
 
     @include encore-background('/assets/stream/lumineers_background.jpg');
 
@@ -16,8 +20,9 @@
     }
 
     h2 {
-      margin-left: 100px;
-      margin-top: 8px;
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 100px;
 
       color: white;
       font-size: 2.6rem;
@@ -35,7 +40,7 @@
     text-align: right;
 
     p {
-      margin-left: 20px;
+      margin-right: 20px;
       padding-top: 3px;
       font-size: 1.3rem;
       font-weight: bold;

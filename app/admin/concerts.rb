@@ -4,7 +4,7 @@ ActiveAdmin.register Concert do
     column :id
     column "Picture" do |concert|
       link_to image_tag(concert.picture.url(:thumb)), admin_concert_posts_path(concert)
-    end                         
+    end                  
     column :title                     
     column :date        
     column :venue           
@@ -23,6 +23,7 @@ ActiveAdmin.register Concert do
       f.input :venue_lat
       f.input :venue_long
       f.input :picture, :as => :file, :hint => f.template.image_tag(f.object.picture.url(:thumb))
+      f.input :background, :as => :file, :hint => f.template.image_tag(f.object.background.url(:default))
       f.input :facebook_page
       f.input :twitter
       f.input :hashtag
