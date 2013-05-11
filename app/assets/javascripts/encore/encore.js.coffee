@@ -1,23 +1,3 @@
-# Turn on jPanel menu
-@load_jpanel = ->
-  # Fix for Android
-  jPM = jPM or $.jPanelMenu(
-    beforeOpen: ->
-      $("#menu-trigger").removeClass "menu-trigger"
-      $('.ui-popup').popup('close') # close all popups so they don't reappear again
-
-    afterClose: ->
-      $("#menu-trigger").addClass "menu-trigger"
-
-    animation: true
-  )
-  jPM.off()
-  jPM.on()
-
-  # Close menu on menu links
-  $("#jPanelMenu-menu a").click ->
-    jPM.close()
-  
 # Heart pics on stream page
 @load_hearts = ->
   # Get JSON Data
@@ -35,6 +15,7 @@
 
       $.post "/favourite/" + event.target.id
     else
+      mixpanel.track "Attempted to favourite a post", {"post_id": event.target.id}
       $("#facebookPopup").popup("open")
 
     false

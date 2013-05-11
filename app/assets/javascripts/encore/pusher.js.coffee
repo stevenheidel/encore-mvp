@@ -23,7 +23,7 @@
 
 @load_pusher_posts = ->
   posts_data = $.parseJSON $("#posts-data").html() if $("#posts-data").html()
-  concert_id = posts_data.concert_id
+  concert_id = posts_data?.concert_id
 
   channel = pusher.subscribe("channel_concert_" + concert_id)
   channel.bind "new_post", (data) ->

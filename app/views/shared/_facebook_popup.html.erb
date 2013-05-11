@@ -1,15 +1,11 @@
 <% cache ["v1", "facebook-popup"] do %>
-<div data-role="popup" id="facebookPopup" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
-  <center> <h3>Welcome to Encore!</h3>
-  <p>Sorry you need to be logged in to heart your favourite
-  content </p>
-  </p> Sign up with Facebook below </p>
+<div data-role="popup" id="facebookPopup" data-theme="d" data-overlay-theme="b" style="max-width:340px">
+  <h3>Welcome to Encore!</h3>
+  <p>Sorry you need to be logged in to <%= image_tag 'stream/heart-on.png' %> your favourite content</p>
 
-  <center> <%= link_to image_tag("login/facebook.png"), user_omniauth_authorize_path(:facebook), data: {ajax: false} %> </center> 
+  <%= link_to image_tag("login/facebook.png"), user_omniauth_authorize_path(:facebook), data: {ajax: false} %>
 
-  <p><small>(We'll never post anything to your timeline)</small>
-  	<center> <a href="index.html" data-role="button" data-rel="back" data-theme="b" data-icon="delete" data-inline="true" data-mini="true"> Close </a> </center>
-   </center>
-   
+  <p><small>(We'll never post anything to your timeline)</small></p>
+  <p><a href="" data-role="button" data-rel="back" data-theme="b" data-icon="delete" data-inline="true">Close</a></p>
 </div>
 <% end %>

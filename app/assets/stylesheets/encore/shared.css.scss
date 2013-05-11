@@ -87,3 +87,24 @@
     }
   }
 }
+
+#facebookPopup {
+  h3, p {
+    text-align: center;
+  }
+
+  p {
+    line-height: 3.0rem;
+    color: rgba(155,155,155,1);
+
+    img {
+      display: inline;
+      width: 18px;
+    }
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
