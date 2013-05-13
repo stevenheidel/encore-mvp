@@ -1,4 +1,6 @@
 class ConcertsController < InheritedResources::Base
+  respond_to :json, :only => :index
+
   def show
     @hearts = []
 
