@@ -37,7 +37,12 @@
     #$("#facebooklogin").remove()
 
     $("#concert-list").slideUp 400, ->
-      $("#addPage").insertAfter("#profilecover")
       $("#addPage").slideDown()
+
+    false
+
+  $("#back").click ->
+    $("#addPage").slideUp 400, ->
+      $("#concert-list").slideDown()
 
     false

@@ -36,7 +36,7 @@
   }
 }
 
-#concert-list {
+#concert-list, #add-list {
   // hack to fix double shadow on last list item
   .ui-last-child {
     border-bottom-width: 0px !important;
