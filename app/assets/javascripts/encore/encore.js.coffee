@@ -2,7 +2,7 @@
 @load_hearts = ->
   # Get JSON Data
   posts_data = $.parseJSON $("#posts-data").html() if $("#posts-data").html()
-  
+
   $(".heartless").each (i, obj) ->
     $(obj).addClass("heartpic") # enable hearts if logged in
     $(obj).addClass("on") if parseInt($(obj).attr('id')) in posts_data.hearts # selected ones
@@ -30,3 +30,5 @@
       
       mixpanel.track("Signed up for beta")
     false
+
+
