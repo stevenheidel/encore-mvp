@@ -1,10 +1,10 @@
 <% cache concert do %>
-<li>
-  <%= link_to concert do %>
-  <%= image_tag concert.picture.url(:thumb) %>
-  <h3><%= concert.title %></h3>
-  <p class="venue"><%= concert.venue %></p>
-  <p class="date"><%= concert.date.strftime("%B %d, %Y") %></p>
-  <% end %>
-</li>
+  <li>
+    <%= link_to concert, :class => 'concert' do %>
+      <%= image_tag concert.picture.url(:thumb) %>
+      <h3><%= concert.title %></h3>
+      <p class="venue"><%= concert.venue %></p>
+      <p class="date"><%= concert.date.strftime("%B %d, %Y") %></p>
+    <% end %>
+  </li>
 <% end %>

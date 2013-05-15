@@ -15,10 +15,19 @@
       link: $(this).text()
     }
 
-  $("#concert-list a").click ->
+  $("#concert-list a.concert").click ->
     mixpanel.track "Viewed concert from profile", {
         concert_name: $(this).children("h3").text()
     }
+
+  $("#concert-list a#addConcert").click ->
+    mixpanel.track "Clicked add concert from profile"
+
+  $("#concert-list a#addConcertDetails").click ->
+    mixpanel.track "Clicked add concert (details)"
+
+  $("#concert-list a#addConcertStub").click ->
+    mixpanel.track "Clicked add concert (ticket stub)"
 
   $("#deal-list a").click ->
     mixpanel.track "Clicked on a deal", {

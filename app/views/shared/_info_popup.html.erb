@@ -1,11 +1,9 @@
 <% cache ["v1", "info-popup"] do %>
-<div data-role="popup" id="infoPopup" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
-  <h3>Welcome to Encore!</h3> 
-  <p>Add to this show's live stream by taking photos on instagram, tweeting or filming video with vine.</p>
-  <!--<p> Sign up for Beta or post Feedback below </p>-->
-  <a href="index.html" data-role="button" data-rel="back" data-theme="b" data-icon="delete" data-inline="true" data-mini="true"> Close </a>
-  <!--
-  <a href="#signupForm" data-role="button" data-theme="b" data-icon="forward" data-inLine="true" data-mini="true"> Sign Up </a>
-  <a href="profile.html" data-role="button" data-theme="b" data-icon="forward" data-inLine="true" data-mini="true"> Feedback </a>-->
+<div data-role="popup" id="infoPopup" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:1em; text-align: center;">
+  <h3>ENCORE @ <br /> <%= Concert.find_by_id(ENV['CURRENT_CONCERT_ID'].to_i).title %></h3> 
+  <p>Check out photos from tonight's show.</p>
+  <p>--- OR ---</p>
+  <p>See the best shots from your past concerts on the profile page.</p>
+  <a href="index.html" data-role="button" data-rel="back" data-theme="b" data-icon="delete" data-inline="true" data-mini="true">Close</a>
 </div>
 <% end %>

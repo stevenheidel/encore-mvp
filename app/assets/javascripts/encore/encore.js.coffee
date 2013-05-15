@@ -32,3 +32,12 @@
     false
 
 
+@add_concert = ->
+  $("#addConcert").click ->
+    #$("#facebooklogin").remove()
+
+    $("#concert-list").slideUp 400, ->
+      $("#addPage").insertAfter("#profilecover")
+      $("#addPage").slideDown()
+
+    false

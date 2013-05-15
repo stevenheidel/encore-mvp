@@ -21,6 +21,7 @@ $(document).bind "pageinit", ->
 
   load_hearts()
   load_signup_form()
+  add_concert()
 
   load_mixpanel()
 

@@ -15,8 +15,7 @@
 <ul data-role="listview" data-inset="true" data-shadow="false" data-corners="false" id="concert-list">
   <%= render Concert.find_by_id(ENV['CURRENT_CONCERT_ID']) %>
 
-  <%= render :partial => "shared/profile_signup" %>
-</ul>
+  <%= render 'shared/profile_addshow' %>
 
 <div id="facebooklogin">
   <p>Want to customize your profile and <%= image_tag 'stream/heart-on.png' %> your favourite content?</p>
