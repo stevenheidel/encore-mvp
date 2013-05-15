@@ -9,7 +9,7 @@ $.mobile.changePage.defaults.allowSamePageTransition = true;
 $.mobile.ignoreContentEnabled = true;
 
 # Equivalent to jQuery document.ready
-$(document).bind "pageinit", ->
+$(document).on "pageshow", ->
 
   # Stupid hack to fix log out
   # http://www.channaly.info/redirect-sign-out-link-in-devise-rails3-with-jquery-mobile/
