@@ -1,4 +1,4 @@
-<% cache ["profile-addshow"] do %>
+<% cache ["v2", "profile-addshow"] do %>
   <li id="signupbutton">
     <a id="addConcert" href="#">
       <%= image_tag 'profile/plus.png' %>
@@ -9,12 +9,12 @@
 </ul>
 
   <div id="addPage" style="display:none;">
-    <ul data-role="listview" data-inset="true" data-shadow="false" data-corners="false" id="add-list">
+    <ul class="encore-listings" data-role="listview" data-inset="true" data-shadow="false" data-corners="false" id="add-list">
       <li>
         <a href="#sorryPopup" id="addConcertDetails" data-rel="popup" data-position-to="window" data-transition="pop">
           <%= image_tag 'profile/clock.png' %>
           <h3>Enter the details</h3>
-          <p class="venue">Details</p>
+          <p class="venue">Manually input the name of the concert and the date.</p>
         </a>
       </li>
 
@@ -22,7 +22,7 @@
         <a href="#sorryPopup" id="addConcertStub" data-rel="popup" data-position-to="window" data-transition="pop">
           <%= image_tag 'profile/ticket.png' %>
           <h3>Scan a ticket stub</h3>
-          <p class="venue">Details</p>
+          <p class="venue">Do you save your stubs? Scan it with the phone's camera and we'll find photos from the concert automatically.</p>
         </a>
       </li>
     </ul>
