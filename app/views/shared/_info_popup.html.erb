@@ -1,4 +1,4 @@
-<% cache ["v1", "info-popup"] do %>
+<% cache ["v2", "info-popup"] do %>
 <div data-role="popup" id="infoPopup" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:1em; text-align: center;">
   <h3>ENCORE @ <br /> <%= Concert.find_by_id(ENV['CURRENT_CONCERT_ID'].to_i).title %></h3> 
   <p>Check out photos from tonight's show.</p>
