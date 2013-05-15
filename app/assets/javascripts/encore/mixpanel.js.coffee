@@ -1,8 +1,8 @@
 @load_mixpanel = ->
   
-  mixpanel.track_links "#facebooklogin a#loginwithfacebook", "Clicked 'Log in with Facebook' from default profile"
+  mixpanel.track_links "a#facebookDefaultProfile", "Clicked 'Log in with Facebook' from default profile"
 
-  mixpanel.track_links "#facebookPopup a#loginwithfacebook", "Clicked 'Log in with Facebook' from popup"
+  mixpanel.track_links "a#facebookFromPopup", "Clicked 'Log in with Facebook' from popup"
 
   $("#concertheader .setlist").click ->
     mixpanel.track "Clicked 'Setlist'"
