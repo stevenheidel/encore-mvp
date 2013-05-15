@@ -68,7 +68,7 @@
     <!-- First popup -->
     <script>
       if (localStorage.popUpShown != 'true') {
-        $(document).on("pageinit", '.ui-page', function() {
+        $(document).on("pageshow", '.ui-page', function() {
           setTimeout(function () {
             $("#infoPopup").popup("open");
 

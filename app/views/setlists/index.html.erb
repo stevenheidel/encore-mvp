@@ -4,11 +4,13 @@
 
 <ul id="setlist-list" class="encore-listings" data-role="listview" data-inset="true" data-corners="false">
   <% @setlists.each.with_index(1) do |setlist, index| %>
-  <li data-icon="buybutton">
+  <li>
     <a href="<%= setlist.itunes %>" target="_blank">
       <%= image_tag setlist.picture.url(:thumb) %>
       <h2><%= index %>. <%= setlist.song %></h2>
       <p><%= setlist.artist %></p>  
+    
+      <p class="ui-li-aside"><img alt="iTunes Canada" border="0" style="margin-left:-80px;" src="http://linkmaker.itunes.apple.com/htmlResources/assets/images/web/linkmaker/badge_itunes-lrg.png"></p>
     </a>
   </li>
   <% end %>
