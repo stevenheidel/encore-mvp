@@ -18,7 +18,7 @@
         mixpanel.track "Attempted to favourite a post", {"post_id": event.target.id}
         $("#facebookPopup").popup("open")
 
-    false
+      false
   
 @load_signup_form = ->
   # Sign-up popup code
