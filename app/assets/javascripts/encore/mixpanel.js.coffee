@@ -23,10 +23,10 @@
   $("#concert-list a#addConcert").click ->
     mixpanel.track "Clicked add concert from profile"
 
-  $("#concert-list a#addConcertDetails").click ->
+  $("#add-list a#addConcertDetails").click ->
     mixpanel.track "Clicked add concert (details)"
 
-  $("#concert-list a#addConcertStub").click ->
+  $("#add-list a#addConcertStub").click ->
     mixpanel.track "Clicked add concert (ticket stub)"
 
   $("#deal-list a").click ->
