@@ -9,7 +9,7 @@
     display: table;
     width: 100%;
 
-    @include encore-background('/assets/stream/killersback.png');
+    @include encore-background('/assets/stream/stream_back.png');
 
     img {
       position: absolute; // needed to overlay text underneath
