@@ -67,6 +67,7 @@
     </script>
     <!-- End Google Analytics -->
 
+    <% unless current_page?(root_url) %>
     <!-- First popup -->
     <script>
       if (localStorage.popUpShown != 'true') {
@@ -80,21 +81,26 @@
       }
     </script>
     <!-- End first popup -->
+    <% end %>
 
     <%= csrf_meta_tags %>
   </head>
   <body>
     <div data-role="page">
-      <%= render('shared/panel') %>
-      <%= render('shared/top_bar') %>
-
-      <div data-role="content">
+      <% if current_page?(root_url) %>
         <%= yield %>
-      </div>
+      <% else %>
+        <%= render('shared/panel') %>
+        <%= render('shared/top_bar') %>
 
-      <%= render('shared/signup_popup') %>
-      <%= render('shared/info_popup') %>
-      <%= render('shared/facebook_popup') %>
+        <div data-role="content">
+          <%= yield %>
+        </div>
+
+        <%= render('shared/signup_popup') %>
+        <%= render('shared/info_popup') %>
+        <%= render('shared/facebook_popup') %>
+      <% end %>
     </div>
   </body>
 </html>

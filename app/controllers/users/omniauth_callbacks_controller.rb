@@ -8,4 +8,12 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       # Failure?
     end
   end
+
+  def twitter
+
+  end
+
+  def instagram
+
+  end
 end

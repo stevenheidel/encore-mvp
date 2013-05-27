@@ -1,6 +1,6 @@
 EncoreMvp::Application.routes.draw do
-  root :to => 'concerts#show', :id => ENV["CURRENT_CONCERT_ID"].to_i
-
+  root :to => 'welcome#index', :as => :new_user_session
+  
   resources :concerts, :only => [:index, :show] do
     resources :setlists, :only => [:index]
     resources :deals, :only => [:index]
@@ -8,7 +8,7 @@ EncoreMvp::Application.routes.draw do
 
   resources :concert_listings, :only => [:index]
 
-  get 'profile' => 'welcome#profile', :as => :new_user_session # profile is also login
+  get 'profile' => 'welcome#profile'
 
   post 'signup' => 'users#signup'
 
