@@ -1,8 +1,11 @@
 @load_mixpanel = ->
   
-  mixpanel.track_links "a#facebookDefaultProfile", "Clicked 'Log in with Facebook' from default profile"
+  #mixpanel.track_links "a#facebookDefaultProfile", "Clicked 'Log in with Facebook' from default profile"
 
-  mixpanel.track_links "a#facebookFromPopup", "Clicked 'Log in with Facebook' from popup"
+  #mixpanel.track_links "a#facebookFromPopup", "Clicked 'Log in with Facebook' from popup"
+
+  mixpanel.track_links "#homepage a", "Clicked social login", (ele) ->
+    return { network: $(ele).find('img').attr('alt').slice(0,-5) }
 
   $("#concertheader .setlist").click ->
     mixpanel.track "Clicked 'Setlist'"
