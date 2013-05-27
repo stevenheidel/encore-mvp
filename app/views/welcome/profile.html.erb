@@ -1,7 +1,7 @@
 <% cache ["profile-cover", current_user] do %>
   <div id="profilecover">
     <div class="profilepic">
-      <% if current_user.profile_image_url # required for legacy users without profile_image_url %>
+      <% if current_user.try(:profile_image_url) # required for legacy users without profile_image_url %>
         <%= image_tag current_user.profile_image_url %>
       <% else %>
         <%= image_tag "http://graph.facebook.com/#{current_user.uid}/picture?width=80&height=80" %>
