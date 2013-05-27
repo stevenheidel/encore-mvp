@@ -1,7 +1,11 @@
 <% cache ["profile-cover", current_user] do %>
   <div id="profilecover">
     <div class="profilepic">
-      <%= image_tag "http://graph.facebook.com/#{current_user.uid}/picture?width=80&height=80" %>
+      <% if current_user.profile_image_url %>
+        <%= image_tag current_user.profile_image_url %>
+      <% else %>
+        <%= image_tag "http://graph.facebook.com/#{current_user.uid}/picture?width=80&height=80" %>
+      <% end %>
     </div>
 
     <div class="profiletext">

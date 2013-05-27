@@ -39,10 +39,6 @@
       <% end %>
 
       <% if user_signed_in? %>
-        <% if current_user.just_registered? %>
-          mixpanel.alias("<%= current_user.email %>");
-        <% end %>
-      
         mixpanel.identify("<%= current_user.email %>");
         mixpanel.name_tag("<%= current_user.name %>");
 
@@ -97,9 +93,7 @@
           <%= yield %>
         </div>
 
-        <%= render('shared/signup_popup') %>
         <%= render('shared/info_popup') %>
-        <%= render('shared/facebook_popup') %>
       <% end %>
     </div>
   </body>

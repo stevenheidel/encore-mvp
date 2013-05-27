@@ -219,6 +219,14 @@ Devise.setup do |config|
   facebook_secret = ENV['FACEBOOK_SECRET'] || "24e07ca9763ccbde16bc5fb5c8a4a956"
   config.omniauth :facebook, facebook_id, facebook_secret, display: 'touch'
 
+  twitter_key = ENV['TWITTER_KEY'] || "gvCxm0rsstTw4lLnJ1gOw"
+  twitter_secret = ENV['TWITTER_SECRET'] || "XqRQXu6eEuGB5UqKCxssSiki5G6veZfhPCgRhdvwE"
+  config.omniauth :twitter, twitter_key, twitter_secret
+
+  instagram_key = ENV['INSTAGRAM_KEY'] || "e65e4272f48a49f4a0ace7a1fae39276"
+  instagram_secret = ENV['INSTAGRAM_SECRET'] || "ec426c8d80684b38aca8507220a5d0e1"
+  config.omniauth :instagram, instagram_key, instagram_secret
+
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

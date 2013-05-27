@@ -4,10 +4,10 @@
 
   <p>Welcome to the exclusive preview of Encore, your concert app.</p>
 
-  <%= link_to image_tag("login/facebook.png"), user_omniauth_authorize_path(:facebook), data: {ajax: false} %>
+  <%= link_to image_tag("login/facebooklogin.png"), user_omniauth_authorize_path(:facebook), data: {ajax: false} %>
 
-  <%#= link_to "Twitter", user_omniauth_authorize_path(:twitter) %>
+  <%= link_to image_tag("login/twitterlogin.png"), user_omniauth_authorize_path(:twitter), data: {ajax: false} %>
 
-  <%#= link_to "Instagram", user_omniauth_authorize_path(:instagram) %>
+  <%= link_to image_tag("login/instagramlogin.png"), user_omniauth_authorize_path(:instagram), data: {ajax: false} %>
 </div> 
 <% end %>

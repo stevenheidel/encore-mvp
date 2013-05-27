@@ -6,6 +6,9 @@ group :development do
   gem 'sqlite3'
 
   gem 'debugger'
+
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :production do
@@ -45,10 +48,12 @@ gem 'unicorn'
 gem 'inherited_resources'
 gem 'activeadmin'
 
-# for user authentication and Facebook login
+# for user authentication and Facebook/Twitter/Instagram login
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-instagram'
 
 # for all the APIs
 gem 'httparty'
