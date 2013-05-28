@@ -1,5 +1,5 @@
 <div id="concertheader">
-  <div class="concertcover">
+  <div class="concertcover" style="background-image: url('<%= @concert.background.url(:default) %>');">
     <%= image_tag @concert.picture.url(:medium) %>
     <h2><%= @concert.title %></h2>
   </div>

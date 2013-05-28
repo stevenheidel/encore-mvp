@@ -11,6 +11,26 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :concerts, :uniq => true
   has_and_belongs_to_many :posts, :uniq => true
 
+  def add_concert(concert)
+    if concert
+      self.concerts << concert unless self.concerts.include?(concert)
+    end
+  end
+
+  def toggle_favourite(post)
+    if post
+      if self.posts.include?(post)
+        # Remove from favourites
+        self.posts.delete(post)
+      else
+        # Add to favourites
+        self.posts << post
+      end
+    end
+  end
+
+  # OAUTH PROVIDERS
+  
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
     user = User.where(:provider => auth.provider, :uid => auth.uid).first
 
@@ -54,23 +74,5 @@ class User < ActiveRecord::Base
     end
 
     user
-  end
-
-  def add_concert(concert)
-    if concert
-      self.concerts << concert unless self.concerts.include?(concert)
-    end
-  end
-
-  def toggle_favourite(post)
-    if post
-      if self.posts.include?(post)
-        # Remove from favourites
-        self.posts.delete(post)
-      else
-        # Add to favourites
-        self.posts << post
-      end
-    end
   end
 end

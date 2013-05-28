@@ -23,6 +23,6 @@ $(document).on "pageshow", '.ui-page', ->
   load_signup_form()
   add_concert()
 
-  load_mixpanel()
+  load_mixpanel() if mixpanel?
 
-  load_pusher_posts()
+  load_pusher_posts() if pusher?

@@ -1,0 +1,13 @@
+<% cache ["first_popup"] do %>
+  <script>
+    if (localStorage.popUpShown != 'true') {
+      $(document).on("pageshow", '.ui-page', function() {
+        setTimeout(function () {
+          $("#infoPopup").popup("open");
+
+          localStorage.popUpShown = 'true';
+        }, 1500);
+      });
+    }
+  </script>
+<% end %>

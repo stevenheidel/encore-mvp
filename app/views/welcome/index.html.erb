@@ -2,7 +2,7 @@
 <div data-role="content" id="homepage">
   <%= image_tag "login/bolt2.png" %>
 
-  <p>Welcome to the exclusive preview of Encore, your concert app.</p>
+  <p>Test out Encore at tonight's <strong><%= Concert.find_by_id(ENV['CURRENT_CONCERT_ID'].to_i).title %></strong> Concert for a chance to win $100.</p>
 
   <%= link_to image_tag("login/facebooklogin.png"), user_omniauth_authorize_path(:facebook), data: {ajax: false} %>
 

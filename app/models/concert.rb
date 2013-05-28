@@ -13,6 +13,6 @@ class Concert < ActiveRecord::Base
   }
 
   has_attached_file :background, styles: {
-    default: '100x100>'
+    default: '400x100>'
   }
 end
