@@ -24,9 +24,16 @@
       pusher = new Pusher("<%= Pusher.key %>");
     </script>
 
-    <%= render 'shared/javascripts/mixpanel' %>
-    <%= render 'shared/javascripts/google_analytics' %>
-    <%= render 'shared/javascripts/first_popup' unless current_page?(root_url) %>
+    <% cache ["header", current_user] do %>
+      <% 
+        developer_names = ["Simon Bromberg", "Steven Heidel", "Cody Mazza-anthony", "Nicholas Klimchuk", "Michael Warshafsky"]
+        unless developer_names.include?(current_user.try(:name))
+      %>
+        <%= render 'shared/javascripts/mixpanel' %>
+        <%= render 'shared/javascripts/google_analytics' %>
+      <% end %>
+      <%= render 'shared/javascripts/first_popup' unless current_page?(root_url) %>
+    <% end %>
 
     <%= javascript_include_tag "application" %>
 

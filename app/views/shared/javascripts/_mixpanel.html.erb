@@ -1,35 +1,28 @@
-<% cache ["mixpanel", current_user] do %>
-  <% 
-    developer_names = ["Simon Bromberg", "Steven Heidel", "Cody Mazza-anthony", "Nicholas Klimchuk", "Michael Warshafsky"]
-    if user_signed_in? && !developer_names.include?(current_user.name) 
-  %>
-    <script>
-      (function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
-      typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
-      b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
-      
-      <% if Rails.env.development? %>
-        mixpanel.init("5036ddbbdd45290f2c801a3785d920f1");
-      <% elsif Rails.env.production? %>
-        mixpanel.init("ca46f5eba468afd46551f7c9ced4fb6c");
-      <% end %>
-
-      <% if user_signed_in? %>
-        if (localStorage.aliased != 'true') {
-          mixpanel.alias("<%= current_user.email %>");
-          localStorage.aliased = 'true';
-        }
-        else {
-          mixpanel.identify("<%= current_user.email %>");
-        }
-        mixpanel.name_tag("<%= current_user.name %>");
-
-        mixpanel.people.set_once({
-          $email: "<%= current_user.email %>",
-          $name:  "<%= current_user.name %>",
-          $created: "<%= current_user.created_at %>"
-        });
-      <% end %>
-    </script>
+<script>
+  (function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+  typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+  b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+  
+  <% if Rails.env.development? %>
+    mixpanel.init("5036ddbbdd45290f2c801a3785d920f1");
+  <% elsif Rails.env.production? %>
+    mixpanel.init("ca46f5eba468afd46551f7c9ced4fb6c");
   <% end %>
-<% end %>
+
+  <% if user_signed_in? %>
+    if (localStorage.aliased != 'true') {
+      mixpanel.alias("<%= current_user.email %>");
+      localStorage.aliased = 'true';
+    }
+    else {
+      mixpanel.identify("<%= current_user.email %>");
+    }
+    mixpanel.name_tag("<%= current_user.name %>");
+
+    mixpanel.people.set_once({
+      $email: "<%= current_user.email %>",
+      $name:  "<%= current_user.name %>",
+      $created: "<%= current_user.created_at %>"
+    });
+  <% end %>
+</script>
