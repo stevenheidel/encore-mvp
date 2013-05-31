@@ -1,11 +1,11 @@
 <script>
   if (localStorage.popUpShown != 'true') {
     $(document).on("pageshow", '.ui-page', function() {
+      localStorage.popUpShown = 'true';
+
       setTimeout(function () {
         $("#infoPopup").popup("open");
-
-        localStorage.popUpShown = 'true';
-      }, 1500);
+      }, 1000);
     });
   }
 </script>
