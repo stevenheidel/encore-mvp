@@ -1,9 +1,7 @@
 <% cache ["v2", "info-popup"] do %>
 <div data-role="popup" id="infoPopup" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:1em; text-align: center;">
   <h3>ENCORE @ <br /> <%= Concert.find_by_id(ENV['CURRENT_CONCERT_ID'].to_i).title %></h3> 
-  <p>Check out photos from tonight's show.</p>
-  <p>--- OR ---</p>
-  <p>See the best shots from your past concerts on the profile page.</p>
+  <p>Post pictures to Instagram with the hashtag <b>&#35;Encore</b> and they'll appear on this live stream!</p>
   <a data-role="button" data-rel="back" data-theme="b" data-icon="delete" data-inline="true" data-mini="true">Close</a>
 </div>
 <% end %>
