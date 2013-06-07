@@ -15,7 +15,7 @@
     .appendTo( $.mobile.pageContainer ).delay( 1500 )
     .on("click", function() {
       $(this).remove();
-      $.mobile.changePage('/concerts/11',{
+      $.mobile.changePage('/concerts/12',{
         allowSamePageTransition : true,
         reloadPage: true
       });
