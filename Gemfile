@@ -75,3 +75,5 @@ gem 'aws-sdk'
 
 # for syncing
 gem 'pusher'
+
+gem 'deep_cloneable'

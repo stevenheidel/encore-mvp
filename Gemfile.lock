@@ -91,6 +91,8 @@ GEM
       debugger-ruby_core_source (~> 1.2.0)
     debugger-linecache (1.2.0)
     debugger-ruby_core_source (1.2.0)
+    deep_cloneable (1.5.1)
+      activerecord (>= 3.1)
     devise (2.2.3)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -286,6 +288,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   dalli
   debugger
+  deep_cloneable
   devise
   geocoder
   httparty
